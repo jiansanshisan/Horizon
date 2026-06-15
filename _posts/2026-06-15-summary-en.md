@@ -5,336 +5,337 @@ date: 2026-06-15
 lang: en
 ---
 
-> From 29 items, 16 important content pieces were selected
+> From 31 items, 15 important content pieces were selected
 
 ---
 
-1. [Pyodide 314.0 allows publishing WASM wheels to PyPI](#item-1) ⭐️ 9.0/10
-2. [Adobe RMSDK Blamed for Kobo ePub Rendering Woes](#item-2) ⭐️ 8.0/10
-3. [Apple Unveils Foundation Models API Abstraction for Developers](#item-3) ⭐️ 8.0/10
-4. [Curl to stop accepting vulnerability reports for July 2026](#item-4) ⭐️ 8.0/10
-5. [Rio's LLM revealed as weighted merge of existing models](#item-5) ⭐️ 8.0/10
-6. [AI Won't Replace Software Engineers: Data and Analysis](#item-6) ⭐️ 8.0/10
-7. [Verifier Tax: Horizon-Dependent Safety–Success Tradeoff in LLM Agents](#item-7) ⭐️ 8.0/10
-8. [Nerds Lost to Status and Money in Tech](#item-8) ⭐️ 7.0/10
-9. [Enhancing Emacs with More Batteries-Included Packages](#item-9) ⭐️ 7.0/10
-10. [Kage: Mirror any website into a single offline-serving binary](#item-10) ⭐️ 7.0/10
-11. [Mapping SQLite result columns to source table.column](#item-11) ⭐️ 7.0/10
-12. [Open-source pipeline enhances LLM multi-hop reasoning with knowledge graphs](#item-12) ⭐️ 7.0/10
-13. [luau-wasm 0.1a0 enables Luau in Pyodide via WASM wheel](#item-13) ⭐️ 6.0/10
-14. [Career Implications of an Evolutionary Algorithms PhD in ML](#item-14) ⭐️ 6.0/10
-15. [Why AI labs send many to conferences?](#item-15) ⭐️ 6.0/10
-16. [Free Bilingual ML Notebook Course Seeks Feedback](#item-16) ⭐️ 6.0/10
+1. [Pyodide 314.0 Allows WASM Wheels on PyPI](#item-1) ⭐️ 9.0/10
+2. [Verifier Tax: Safety-Success Tradeoff in LLM Agents](#item-2) ⭐️ 9.0/10
+3. [Apple Launches Foundation Models API Abstraction](#item-3) ⭐️ 8.0/10
+4. [Rio de Janeiro's LLM Revealed as Merge of Existing Models](#item-4) ⭐️ 8.0/10
+5. [Kobo Rejects Valid ePub Due to Adobe RMSDK](#item-5) ⭐️ 7.0/10
+6. [The Decline of Authentic Nerd Culture](#item-6) ⭐️ 7.0/10
+7. [Blog Post Highlights Underutilized Emacs Built-in Features](#item-7) ⭐️ 7.0/10
+8. [Kage: Archive websites into a single binary for offline viewing](#item-8) ⭐️ 7.0/10
+9. [Curl to pause vulnerability reports for July 2026 vacation](#item-9) ⭐️ 7.0/10
+10. [21 years of the eight fallacies of distributed computing (2025)](#item-10) ⭐️ 7.0/10
+11. [Why AI hasn’t replaced software engineers, and won’t](#item-11) ⭐️ 7.0/10
+12. [PrintGuard 2.0: 5MB Few-Shot FDM Failure Detector Runs in Browser and CPython](#item-12) ⭐️ 7.0/10
+13. [Open-source KG pipeline with hybrid retrieval boosts LLM reasoning](#item-13) ⭐️ 7.0/10
+14. [Mapping SQLite result columns to source table.column](#item-14) ⭐️ 6.0/10
+15. [Quant Firms Flock to ICML 2026 as Diamond Sponsors](#item-15) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Pyodide 314.0 allows publishing WASM wheels to PyPI](https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/#atom-everything) ⭐️ 9.0/10
+## [Pyodide 314.0 Allows WASM Wheels on PyPI](https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/#atom-everything) ⭐️ 9.0/10
 
-Pyodide 314.0 now enables publishing Python packages built for Pyodide as WebAssembly wheels directly to PyPI, removing the need for manual maintenance by Pyodide maintainers. This breaks a major bottleneck for the Pyodide ecosystem, empowering package maintainers to distribute their packages independently and accelerating the availability of Python packages in the browser. The support is based on PEP 783 which defines the PyEmscripten platform, and PyPI merged a PR on April 21st to accept WASM wheels. An example package, luau-wasm, was published to demonstrate the capability.
+Pyodide 314.0, released in June 2026, now supports publishing WebAssembly (WASM) Python wheels directly to PyPI, and installing them at runtime via micropip. This eliminates the previous bottleneck where only Pyodide maintainers could build and host WASM packages, enabling any package author to contribute and dramatically accelerating the ecosystem of Python packages in the browser. The change is backed by PEP 783, which defines the PyEmscripten platform tag (e.g., pyemscripten_2026_0_wasm32). The PyPI warehouse PR supporting WASM wheels landed on April 21, 2026.
 
 rss · Simon Willison · Jun 13, 23:55
 
-**Background**: Pyodide is a port of CPython to WebAssembly/Emscripten, enabling Python to run in the browser. Previously, the Pyodide team manually built and hosted over 300 packages, creating a bottleneck. PEP 783 standardized the Emscripten platform for Python wheels, making this integration possible.
+**Background**: Pyodide is a Python distribution for the browser that compiles the CPython interpreter to WebAssembly. Previously, over 300 packages had to be manually built and maintained by Pyodide core maintainers. PEP 783 (Emscripten Packaging) standardized the wheel platform tag, making it possible for PyPI to accept WASM wheels.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://pyodide.org/">Pyodide — Version 314.0.0</a></li>
-<li><a href="https://peps.python.org/pep-0783/">PEP 783 – Emscripten Packaging | peps .python.org</a></li>
 <li><a href="https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/">Publishing WASM wheels to PyPI for use with Pyodide</a></li>
+<li><a href="https://peps.python.org/pep-0783/">PEP 783 – Emscripten Packaging | peps.python.org</a></li>
+<li><a href="https://pyodide.org/en/314.0.0/development/abi.html">The PyEmscripten Platform — Version 314.0.0 - pyodide.org</a></li>
 
 </ul>
 </details>
+
+**Discussion**: The Hacker News discussion (score 48462759) shows strong community enthusiasm, with many users praising the reduction in maintainer burden and the potential for new browser-based Python applications. Some commenters discussed challenges around compiling C extensions to WASM, but overall sentiment is very positive.
 
 **Tags**: `#Pyodide`, `#WebAssembly`, `#PyPI`, `#Python packaging`, `#WASM`
 
 ---
 
 <a id="item-2"></a>
-## [Adobe RMSDK Blamed for Kobo ePub Rendering Woes](https://andreklein.net/your-epub-is-fine-kobo-disagrees-blame-adobe/) ⭐️ 8.0/10
+## [Verifier Tax: Safety-Success Tradeoff in LLM Agents](https://www.reddit.com/r/MachineLearning/comments/1u58mkq/the_verifier_tax_horizondependent_safetysuccess/) ⭐️ 9.0/10
 
-A blog post argues that Adobe's closed-source RMSDK and poor quality assurance are the root cause of e-book rendering issues on Kobo devices, not the ePub files themselves. The post highlights how the community has developed workarounds like kepubify to bypass these problems. This matters because it reveals systemic quality issues in Adobe's e-book ecosystem, affecting millions of readers and publishers who rely on consistent rendering. It also underscores the importance of open-source alternatives and community-driven solutions in the e-book space. Adobe RMSDK is a closed-source software development kit used by Kobo and many other e-reader manufacturers, but it is notoriously difficult to access or license. The community tool kepubify converts standard ePub files to Kobo's KEPUB format, which uses a more advanced rendering engine and often renders correctly.
+The paper introduces the Verifier Tax, a horizon-dependent tradeoff between task completion and safety for tool-using LLM agents, presented at ACM CAIS 2026. It shows that verification reduces unsafe actions but can decrease success rates as task complexity increases. This research identifies a critical safety-success tradeoff that must be considered when deploying LLM agents in real-world scenarios. It challenges the common practice of evaluating agents solely on task completion, highlighting the need for separate reporting of unsafe success. The study uses τ-bench (Tau-bench) tool-use scenarios and proposes a two-tier verification architecture: first deterministic policy and tool checks, then an LLM-based verifier for contextual safety. The Verifier Tax emerges as a horizon-dependent phenomenon where verification costs increase with task length.
 
-hackernews · sohkamyung · Jun 14, 22:54 · [Discussion](https://news.ycombinator.com/item?id=48533848)
+reddit · r/MachineLearning · /u/AccomplishedLeg1508 · Jun 14, 02:09
 
-**Background**: E-books are commonly distributed in the EPUB format, which is an open standard. However, Kobo devices use Adobe's RMSDK to render these files, and many users experience formatting errors. Adobe's SDK is known for bugs and lack of support, while Kobo's own rendering engine for its KEPUB format often works better. The blog post argues that blaming the ePub format is misguided; the real issue is Adobe's software quality.
+**Background**: Tool-using LLM agents combine large language models with external tools (e.g., APIs, databases) to perform tasks. Their evaluation often focuses on task completion, which can mask safety violations. τ-bench is a benchmark for evaluating such agents in multi-turn, tool-driven interactions. The paper advocates for separating outcomes into safe success, unsafe success, and failure to better assess agent behavior.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.adobe.com/solutions/ebook/rmsdk/faq.html">Adobe Content Server and RMSDK / FAQ</a></li>
-<li><a href="https://pgaskin.net/kepubify/">Kepubify</a></li>
-<li><a href="https://medium.com/@jiminypan/five-interesting-facts-about-adobe-legacy-ebook-rmsdk-b7be0123c874">Five interesting facts about Adobe legacy eBook RMSDK | by Jiminy Panoz | Medium</a></li>
+<li><a href="https://github.com/sierra-research/tau-bench">GitHub - sierra-research/tau- bench : Code and Data for Tau- Bench</a></li>
+<li><a href="https://sierra.ai/blog/tau-bench-shaping-development-evaluation-agents">We explore how Sierra’s 𝜏 - bench is shaping the development and...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments echo frustration with Adobe's lack of responsiveness and QA, with one developer noting that even trying to license RMSDK yields no response. Users recommend converting to KEPUB format using kepubify or considering hardware like the PineNote as an alternative.
-
-**Tags**: `#EPUB`, `#Kobo`, `#Adobe`, `#eBooks`, `#rendering`
+**Tags**: `#LLM agents`, `#AI safety`, `#verification`, `#tool use`, `#evaluation`
 
 ---
 
 <a id="item-3"></a>
-## [Apple Unveils Foundation Models API Abstraction for Developers](https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models) ⭐️ 8.0/10
+## [Apple Launches Foundation Models API Abstraction](https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models) ⭐️ 8.0/10
 
-Apple has introduced a Foundation Models API abstraction layer that lets developers call multiple large language models through a unified interface without managing individual providers. This simplifies LLM integration for Apple developers and gives Apple more control over the AI user experience, potentially enabling a smooth transition to Apple's own foundation models in the future. The API supports both remote and on-device models, but it remains unclear whether multiple apps can share a single downloaded model instance to avoid storage duplication.
+Apple announced the Foundation Models framework at WWDC26, providing an abstraction layer with a unified LanguageModel protocol that allows developers to call both on-device and server-side language models through a single API. This abstraction commoditizes LLMs while Apple retains control over user experience, and it paves the way for a seamless transition to Apple's own on-device models as they improve, reducing developer dependency on third-party APIs. The framework introduces a LanguageModel protocol backed by LanguageModelSession, supporting both local and remote models, but the community notes a lack of built-in sharing for on-device models across apps, which could lead to storage bloat.
 
 hackernews · MehrdadKhnzd · Jun 15, 04:55 · [Discussion](https://news.ycombinator.com/item?id=48536776)
 
-**Background**: Foundation models are large pre-trained AI models that can be adapted for various tasks like text generation and image recognition. Apple's new abstraction layer lets developers call these models through a single API, abstracting away differences between providers such as OpenAI, Google, or Apple's own models. This follows industry trends of creating model-agnostic interfaces.
+**Background**: Foundation models are large AI models trained on diverse data for tasks like language understanding and generation. Apple's new framework provides a vendor-neutral API, letting developers switch between models without code changes. This aligns with Apple's long-term strategy to integrate more capable on-device AI, potentially using its own models trained at significant cost.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Foundation_model">Foundation model - Wikipedia</a></li>
-<li><a href="https://aws.amazon.com/what-is/foundation-models/">What are Foundation Models? - Foundation Models in Generative AI Explained - AWS</a></li>
-<li><a href="https://www.redhat.com/en/topics/ai/what-are-foundation-models">What are foundation models for AI?</a></li>
+<li><a href="https://developer.apple.com/documentation/FoundationModels">Foundation Models | Apple Developer Documentation</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2026/241/">What’s new in the Foundation Models framework - WWDC26 - Videos - Apple Developer</a></li>
+<li><a href="https://byteiota.com/apple-foundation-models-wwdc-2026-multimodal-python-sdk/">Apple Foundation Models WWDC 2026: Multimodal + Python SDK | byteiota</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters praised Apple's strategic move to commoditize LLMs while retaining control over UX. However, concerns were raised about local model management, specifically whether multiple apps using the same on-device model would each download it separately, causing storage bloat. Others speculated that this abstraction paves the way for Apple to seamlessly transition to their own models.
+**Discussion**: Commenters largely see this as Apple commoditizing LLMs while controlling UX, with concerns about on-device model sharing and API key management for end users. Some speculate the abstraction prepares for Apple's own models to seamlessly replace external ones.
 
-**Tags**: `#apple`, `#foundation models`, `#llm`, `#api`, `#ai strategy`
+**Tags**: `#Apple`, `#Foundation Models`, `#LLMs`, `#On-Device AI`, `#Developer Tools`
 
 ---
 
 <a id="item-4"></a>
-## [Curl to stop accepting vulnerability reports for July 2026](https://daniel.haxx.se/blog/2026/06/15/curl-summer-of-bliss/) ⭐️ 8.0/10
+## [Rio de Janeiro's LLM Revealed as Merge of Existing Models](https://github.com/nex-agi/Nex-N2/issues/4) ⭐️ 8.0/10
 
-Curl maintainers announced that they will not accept any vulnerability reports during July 2026, as a measure to prioritize rest and combat maintainer burnout. However, support will continue for enterprise contract holders. This policy highlights the sustainability crisis in open source, where critical projects rely on unpaid volunteers. It also promotes a model where enterprise support contracts help fund maintainer well-being. The halt applies only to vulnerability reports; general bug reports and other project activities may continue. The maintainers explicitly stated they will rest, drawing attention to the human cost of running essential infrastructure.
-
-hackernews · secret-noun · Jun 15, 06:02 · [Discussion](https://news.ycombinator.com/item?id=48537165)
-
-**Background**: Curl is a widely used command-line tool and library for transferring data with URLs, used by billions of devices. Its development is led by Daniel Stenberg and a small team of volunteers. Maintainer burnout is a known issue in open source, with many projects struggling to sustain active development.
-
-**Discussion**: Commenters largely applauded the decision, appreciating the human touch and the encouragement of enterprise support contracts. Some raised concerns about the lack of backup for critical infrastructure, noting that normal organizations stagger vacations to avoid such gaps.
-
-**Tags**: `#curl`, `#open source sustainability`, `#maintainer burnout`, `#security`, `#vulnerability management`
-
----
-
-<a id="item-5"></a>
-## [Rio's LLM revealed as weighted merge of existing models](https://github.com/nex-agi/Nex-N2/issues/4) ⭐️ 8.0/10
-
-Rio de Janeiro's municipality released Rio-3.5-Open-397B as a homegrown fine-tune of Qwen, but technical analysis showed it is a 0.6/0.4 weighted average of Nex-N2 Pro and Qwen3.5-397B-A17B. This incident raises serious ethical concerns about transparency and attribution in AI development, undermining trust in open-source claims and highlighting the need for clear disclosure of model origins. Weight tensor analysis across all 60 layers found the model to be an exact linear interpolation to thousands of standard deviations, and the claimed on-policy distillation was absent from the uploaded weights.
+An investigation shows that Rio de Janeiro's claimed homegrown LLM, Rio-3.5-Open-397B, is actually a weighted merge of approximately 60% Nex-N2 Pro and 40% Qwen3.5-397B-A17B, rather than a fine-tune from scratch. This case highlights significant transparency issues in AI development by government entities, potentially undermining trust in research integrity and policy decisions based on such models. The investigation found that every weight tensor in the Rio model is, to thousands of standard deviations, the same 0.6/0.4 blend of Nex and Qwen across all layers and components, which cannot be explained by typical fine-tuning.
 
 hackernews · unrvl22 · Jun 14, 15:37 · [Discussion](https://news.ycombinator.com/item?id=48528371)
 
-**Background**: Model merging combines weights of multiple LLMs to create a new model without additional training, often improving performance. Weighted averaging is a simple technique, but misrepresenting a merge as original training raises ethical issues.
+**Background**: Model merging is a technique that combines two or more pre-trained models into one by interpolating their weights, without requiring additional training data or computation. It can improve performance on specific tasks but is distinct from fine-tuning, which involves further training on new data. In this case, the merged model was presented as a homegrown fine-tune, which misrepresents the development process.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://arxiv.org/html/2408.07666v5">Model Merging in LLMs, MLLMs, and Beyond: Methods, Theories ...</a></li>
 <li><a href="https://developer.nvidia.com/blog/an-introduction-to-model-merging-for-llms/">An Introduction to Model Merging for LLMs | NVIDIA Technical Blog</a></li>
 <li><a href="https://huggingface.co/blog/mlabonne/merge-models">Merge Large Language Models with mergekit</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters expressed disappointment and criticism over the lack of attribution and deceptive claims, with some speculating the authors may have uploaded the wrong checkpoint before planned distillation.
+**Discussion**: Community comments express skepticism and concern about the lack of attribution and transparency. Some commenters explain that the model upload may have missed distillation steps, while others note that simple linear combination of weights surprisingly improved performance despite zero training.
 
-**Tags**: `#LLM`, `#transparency`, `#model merge`, `#controversy`, `#open-source`
+**Tags**: `#AI`, `#LLM`, `#open-source`, `#ethics`, `#transparency`
+
+---
+
+<a id="item-5"></a>
+## [Kobo Rejects Valid ePub Due to Adobe RMSDK](https://andreklein.net/your-epub-is-fine-kobo-disagrees-blame-adobe/) ⭐️ 7.0/10
+
+An article by Andre Klein reveals that Kobo e-readers may reject perfectly valid ePub files due to quirks in Adobe's Reader Mobile SDK (RMSDK), and suggests converting ePubs to Kobo's kepub format as a workaround. This issue affects many ebook users who rely on Kobo devices, highlighting persistent compatibility problems with Adobe's closed-source RMSDK. The article underscores the need for open standards and alternative rendering engines in the ebook ecosystem. The RMSDK is used by many ereader manufacturers and has known validation issues; even epubs passing epubcheck can fail on Kobo. Converting to kepub invokes Kobo's own rendering engine, which is less strict and based on ePub 3 features.
+
+hackernews · sohkamyung · Jun 14, 22:54 · [Discussion](https://news.ycombinator.com/item?id=48533848)
+
+**Background**: Adobe's Reader Mobile SDK (RMSDK) is a software library that many ereader devices, including Kobo, use to render ePub files and manage DRM. However, RMSDK has been criticized for being buggy and poorly maintained, leading to rejection of valid ePubs. Kobo devices also support a native format called kepub, which uses a more modern rendering engine and often works better. The article recommends using tools like kepubify to convert ePubs to kepub.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.adobe.com/solutions/ebook/rmsdk/faq.html">Adobe Content Server and RMSDK / FAQ</a></li>
+<li><a href="https://medium.com/@jiminypan/five-interesting-facts-about-adobe-legacy-ebook-rmsdk-b7be0123c874">Five interesting facts about Adobe legacy eBook RMSDK | by Jiminy Panoz | Medium</a></li>
+<li><a href="https://pgaskin.net/kepubify/">Kepubify - Patrick Gaskin</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters largely agreed with the author, with some highlighting Adobe's history of neglecting QA (acdha) and the difficulty of even obtaining RMSDK licenses (nfw2). Others pointed out that kepub conversion works well (lidavidm) and mentioned the W3C's role in complicating ePub standards (tannhaeuser). A few promoted alternative devices like the PineNote (hardwaresofton).
+
+**Tags**: `#ebooks`, `#epub`, `#kobo`, `#adobe`, `#validation`
 
 ---
 
 <a id="item-6"></a>
-## [AI Won't Replace Software Engineers: Data and Analysis](https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/#atom-everything) ⭐️ 8.0/10
+## [The Decline of Authentic Nerd Culture](https://mrmarket.lol/what-the-fuck-happened-to-nerds/) ⭐️ 7.0/10
 
-Arvind Narayanan and Sayash Kapoor published an essay arguing that AI will not cause mass unemployment among software engineers, citing data from New York's WARN Act filings where zero out of 160 companies cited AI-related layoffs. This challenges the prevailing AI hype about job displacement in a profession uniquely exposed to AI, suggesting that other occupations with more regulatory barriers are even safer. It refocuses the debate on the actual bottlenecks in software engineering. The essay identifies three real bottlenecks: deciding what to build, verifying and being accountable for what is delivered, and deep human understanding of the codebase, business, and environment. The authors note that even as AI speeds up coding, these bottlenecks remain.
+The article argues that authentic nerd culture, once driven by genuine curiosity and passion, has been diluted by status-seeking and profit motives as technology became mainstream and lucrative. This shift affects the values and ethics of the tech industry, potentially prioritizing profit over innovation and integrity, which resonates with the HN community's concerns about the direction of tech culture. The article notes that as tech wealth grew, it attracted individuals skilled in social status management rather than technical depth, and the culture changed from curiosity-driven to engagement-farming.
 
-rss · Simon Willison · Jun 14, 23:54
+hackernews · vrnvu · Jun 15, 08:23 · [Discussion](https://news.ycombinator.com/item?id=48538229)
 
-**Background**: The essay is a response to widespread claims that AI will automate software engineering jobs entirely. It uses data from the New York WARN Act, which requires companies to disclose if layoffs are AI-related, and surveys of software engineers to argue that the profession involves far more than typing code.
+**Background**: Historically, 'nerd culture' referred to deep, often niche interests in subjects like computing, science fiction, and gaming, typically disconnected from mainstream acclaim or financial reward. As technology companies boomed, the prestige and money associated with tech drew in many who adopted the label for status, leading to a perceived loss of authentic identity.
 
-**Tags**: `#AI`, `#software engineering`, `#job market`, `#economics`, `#future of work`
+**Discussion**: Commenters agree that status-seeking dilutes any field, and many distinguish between 'money-first' founders and genuine nerds still present on HN. Some blame venture capital's obsession with hyper-growth for warping tech culture.
+
+**Tags**: `#tech culture`, `#nerd identity`, `#status`, `#values`, `#hacker news discussion`
 
 ---
 
 <a id="item-7"></a>
-## [Verifier Tax: Horizon-Dependent Safety–Success Tradeoff in LLM Agents](https://www.reddit.com/r/MachineLearning/comments/1u58mkq/the_verifier_tax_horizondependent_safetysuccess/) ⭐️ 8.0/10
+## [Blog Post Highlights Underutilized Emacs Built-in Features](https://karthinks.com/software/even-more-batteries-included-with-emacs/) ⭐️ 7.0/10
 
-A paper presented at ACM CAIS 2026 introduces the 'Verifier Tax' concept, quantifying a horizon-dependent tradeoff between safety and task success when runtime verification is applied to tool-using LLM agents. This work highlights that adding safety enforcement can reduce unsafe successes but also lower task completion over longer horizons, which is critical for deploying LLM agents in real-world applications where both safety and efficiency matter. The study uses Tau-bench tool-use scenarios and proposes a two-tier verification architecture: first deterministic policy/tool checks, then an LLM-based verifier for contextual safety cases.
+Karthinks' blog post highlights three built-in Emacs features—ruler-mode, compare-windows, and scroll-all-mode—that many users overlook, with practical tips for daily use. These built-in features can significantly enhance productivity without requiring external packages, encouraging Emacs users to better leverage their editor's capabilities. Ruler-mode displays a ruler in the header line; compare-windows compares text between two windows; scroll-all-mode synchronizes scrolling across all visible windows. The blog notes that scroll-all-mode currently does not support mouse-wheel scrolling.
 
-reddit · r/MachineLearning · /u/AccomplishedLeg1508 · Jun 14, 02:09
+hackernews · signa11 · Jun 15, 02:30 · [Discussion](https://news.ycombinator.com/item?id=48535886)
 
-**Background**: Tool-using LLM agents can complete tasks while violating safety constraints, making task completion alone a misleading metric. Tau-bench is a benchmark for evaluating agent interactions with simulated users and adherence to domain-specific rules. The Verifier Tax refers to the persistent reduction in task success rate due to runtime safety enforcement.
+**Background**: Emacs is a highly extensible text editor with a vast ecosystem of built-in features and external packages. Many users rely on third-party packages for functionality that already exists in Emacs, leading to underutilization of built-in tools. This blog post aims to address that by showcasing lesser-known but useful built-in modes.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://dl.acm.org/doi/full/10.1145/3786335.3813160">Horizon Dependent Safety--Success Tradeoffs in Tool Using LLM Agents</a></li>
-<li><a href="https://www.caisconf.org/program/2026/papers/the-verifier-tax-horizon-dependent-safety-success-tradeoffs-in-tool-using-llm-ag/">Horizon Dependent Safety–Success Tradeoffs in Tool Using LLM Agents</a></li>
-<li><a href="https://huggingface.co/papers/2406.12045">Paper page - τ- bench : A Benchmark for Tool - Agent -User Interaction...</a></li>
+<li><a href="https://www.emacswiki.org/emacs/RulerMode">EmacsWiki: Ruler Mode</a></li>
+<li><a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Comparing-Files.html">Comparing Files (GNU Emacs Manual)</a></li>
+<li><a href="https://doc.endlessparentheses.com/Fun/scroll-all-mode.html">Emacs Online Documentation</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The Reddit discussion engages with the paper's question of how agent evaluations should report unsafe success—whether to count it as success, failure, or a separate category, with commenters discussing evaluation standards.
+**Discussion**: Commenters shared mixed experiences: one user expressed gratitude for learning about ruler-mode and compare-windows, while others discussed Emacs instability after updates. A commenter using Doom Emacs reported stability, contrasting with Neovim's ecosystem. Another user highlighted the need for better out-of-the-box experience to increase adoption.
 
-**Tags**: `#LLM agents`, `#AI safety`, `#verification`, `#tool-use`
+**Tags**: `#emacs`, `#editor`, `#productivity`, `#tools`
 
 ---
 
 <a id="item-8"></a>
-## [Nerds Lost to Status and Money in Tech](https://mrmarket.lol/what-the-fuck-happened-to-nerds/) ⭐️ 7.0/10
+## [Kage: Archive websites into a single binary for offline viewing](https://github.com/tamnd/kage) ⭐️ 7.0/10
 
-An essay argues that the tech nerd archetype has been corrupted by the pursuit of status and wealth, replacing genuine passion for technology with social climbing and profit-driven motives. This reflection highlights a cultural shift in the tech industry that may affect innovation, ethics, and community values, as the original nerd ethos of curiosity and craftsmanship is sidelined. The essay is highly engaged on Hacker News with 248 points and 168 comments, indicating strong resonance. Commenters debate whether the change is inherent to success or a result of venture capital dynamics and media portrayal.
-
-hackernews · vrnvu · Jun 15, 08:23 · [Discussion](https://news.ycombinator.com/item?id=48538229)
-
-**Background**: The 'nerd' archetype originally described individuals deeply passionate about technology, science, or intellectual pursuits, often socially awkward. With tech wealth booming, many founders and investors have adopted the label while prioritizing status and money over technical curiosity.
-
-**Discussion**: Commenters generally agree that status-seeking attracts non-nerdy individuals, but some argue that nerds were never inherently virtuous; Julian Assange and Mark Zuckerberg exemplify the divergence. Others blame venture capital's hyper-growth model for warping nerd culture.
-
-**Tags**: `#tech culture`, `#nerd identity`, `#social dynamics`, `#status`
-
----
-
-<a id="item-9"></a>
-## [Enhancing Emacs with More Batteries-Included Packages](https://karthinks.com/software/even-more-batteries-included-with-emacs/) ⭐️ 7.0/10
-
-A blog post by Karthik (author of gptel) details additional Emacs packages and configurations that further enhance the editor's built-in capabilities, making it more feature-rich out of the box. This addresses a key pain point for new Emacs users—the need for extensive configuration—by highlighting curated packages that improve usability. It contributes to the ongoing debate about Emacs' out-of-box experience versus its powerful but complex customization. The post is from the author of gptel, a notable Emacs package, but the specific packages mentioned are not listed in the summary. Community comments reveal that many users find Emacs distros like Doom Emacs more stable than vanilla Emacs for daily use.
-
-hackernews · signa11 · Jun 15, 02:30 · [Discussion](https://news.ycombinator.com/item?id=48535886)
-
-**Background**: Emacs is a highly extensible text editor known for its steep learning curve and vast customization capabilities. 'Batteries included' refers to the editor's built-in features, but many users add third-party packages for modern functionality. Distros like Doom Emacs and Spacemacs provide pre-configured setups to ease onboarding.
-
-**Discussion**: Comments highlight polarized experiences: some users report stability with Doom Emacs and praise the ecosystem over Neovim, while others complain about frequent breakage after updates. A long-time user admits to never understanding Dired, illustrating Emacs' complexity.
-
-**Tags**: `#Emacs`, `#editor`, `#configuration`, `#open-source`
-
----
-
-<a id="item-10"></a>
-## [Kage: Mirror any website into a single offline-serving binary](https://github.com/tamnd/kage) ⭐️ 7.0/10
-
-Kage is a new CLI tool that clones any website as a static site and packages it into a single binary that can serve the site offline. This tool simplifies offline access to web content, making it easy to distribute and browse websites without a network connection, which is valuable for documentation, wikis, and archival purposes. Kage generates a single self-contained binary that includes both the static site files and a built-in HTTP server. Users run 'kage serve <directory>' to serve the cloned site.
+Kage is a new CLI tool written in Go that archives any website into a single binary, enabling offline browsing with no tracking or network calls. It was posted on Hacker News as a Show HN and received 590 points and 117 comments. This tool provides a practical solution for offline access to web content, particularly useful in areas with poor connectivity or for preserving documentation. It streamlines the process of saving entire websites into a single, portable binary without external dependencies. Kage uses Go's static file embedding to bundle all website assets into a single binary. The resulting binary runs a local HTTP server to serve the archived site, which requires running the binary even for local viewing.
 
 hackernews · tamnd · Jun 14, 17:25 · [Discussion](https://news.ycombinator.com/item?id=48529990)
 
-**Background**: Typically, browsing a website requires an active internet connection and a server hosting the site. Offline browsing tools often require complex setups or multiple files. Kage addresses this by creating a single executable that serves the entire site, simplifying deployment and sharing.
-
-**Discussion**: Comments highlight practical use cases like offline company wikis and express curiosity about generating the demo GIF. Some users question the necessity of a separate server process for a static site, suggesting a pure HTML/JS solution might be more portable.
-
-**Tags**: `#offline-browsing`, `#static-site`, `#web-archiving`, `#CLI-tool`, `#open-source`
-
----
-
-<a id="item-11"></a>
-## [Mapping SQLite result columns to source table.column](https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/#atom-everything) ⭐️ 7.0/10
-
-Simon Willison used Claude Code to explore programmatic methods for mapping SQL query result columns back to their source table.column in SQLite, including approaches using the apsw library, ctypes to access the C function sqlite3_column_table_name, and analysis of EXPLAIN output. This work could enable richer metadata display in Datasette for arbitrary SQL queries, allowing users to see which columns from which tables comprise each result. It addresses a practical challenge for database tooling and SQL analysis. Claude Code (Opus 4.8) was used because the newer Fable model is banned by the US government. The sqlite3_column_table_name C function is not exposed directly in Python's sqlite3 module, so ctypes was used to call it. The EXPLAIN approach interrogates the query plan to infer column origins.
-
-rss · Simon Willison · Jun 13, 23:05
-
-**Background**: Column provenance refers to identifying the source table and column for each column in a SQL query result. SQLite internally computes this information and exposes it via its C API, but Python's standard sqlite3 wrapper does not provide direct access. Datasette is an open-source tool for exploring and publishing relational databases, and Simon Willison is its creator. Claude Code is Anthropic's AI coding assistant that can help explore technical problems.
+**Background**: Traditional offline browser tools like HTTrack download websites into directories with separate files, which can be cumbersome to share or move. Kage simplifies this by packaging everything into one binary, leveraging Go's ability to embed static files. Similar tools like SingleFile create single HTML files with base64-encoded assets, but Kage produces a standalone server executable.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/">Research: Mapping SQLite result columns back to their source...</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Claude_Code">Claude Code</a></li>
+<li><a href="https://www.httrack.com/">HTTrack Website Copier - Free Software Offline Browser (GNU GPL)</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#SQLite`, `#Datasette`, `#SQL query analysis`, `#column provenance`, `#Claude Code`
+**Discussion**: Community members raised concerns about the need to run a server to view the archive, suggesting a purely static HTML output would be more convenient. Others compared Kage to SingleFile, which produces a single HTML file with embedded assets, and noted that SingleFile is more robust for some use cases.
+
+**Tags**: `#offline`, `#web scraping`, `#static sites`, `#CLI tools`, `#Go`
+
+---
+
+<a id="item-9"></a>
+## [Curl to pause vulnerability reports for July 2026 vacation](https://daniel.haxx.se/blog/2026/06/15/curl-summer-of-bliss/) ⭐️ 7.0/10
+
+Daniel Stenberg, the maintainer of curl, announced that during July 2026, the project will not accept vulnerability reports, aiming to take a break and encourage enterprise support subscriptions. This decision highlights the ongoing issue of maintainer burnout in open source and proposes a novel model for funding through paid support during downtime, potentially influencing other projects. The pause is for the entire month of July 2026; enterprise support contracts will still have access to vulnerability handling during that period.
+
+hackernews · secret-noun · Jun 15, 06:02 · [Discussion](https://news.ycombinator.com/item?id=48537165)
+
+**Background**: curl is a widely used command-line tool and library for transferring data with URLs. Open source maintainers often work without compensation, leading to burnout. This announcement is a rare instance of a maintainer proactively setting boundaries to prioritize well-being and sustainability.
+
+**Discussion**: The community response is overwhelmingly positive, with many praising the maintainer's human approach. One commenter suggests practical advice for disconnecting, while another notes that curl's maturity means the security risk is minimal.
+
+**Tags**: `#open source`, `#curl`, `#security`, `#maintainer burnout`, `#sustainability`
+
+---
+
+<a id="item-10"></a>
+## [21 years of the eight fallacies of distributed computing (2025)](https://blog.apnic.net/2025/12/08/21-years-and-counting-of-eight-fallacies-of-distributed-computing/) ⭐️ 7.0/10
+
+A blog post on APNIC in December 2025 reflects on the eight fallacies of distributed computing, 21 years after their initial formulation, discussing their enduring relevance in modern systems. The eight fallacies remain a critical checklist for distributed systems design, especially as cloud-native and microservices architectures become dominant, helping engineers avoid common pitfalls. The original fallacies include assumptions such as the network is reliable, latency is zero, and bandwidth is infinite; the blog post likely examines each and their implications for current technology.
+
+hackernews · teleforce · Jun 15, 00:07 · [Discussion](https://news.ycombinator.com/item?id=48534628)
+
+**Background**: The eight fallacies of distributed computing were first articulated by L. Peter Deutsch and others at Sun Microsystems around 1994. They describe false assumptions that programmers new to distributed applications often make, such as believing the network is reliable or that topology does not change. These fallacies have been widely taught and referenced in systems engineering.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing">Fallacies of distributed computing - Wikipedia</a></li>
+<li><a href="https://lukasniessen.medium.com/the-8-fallacies-of-distributed-computing-all-you-need-to-know-why-its-still-relevant-in-2026-078b4d8a98f1">The 8 Fallacies of Distributed Computing: All You Need To ...</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters added extra fallacies, such as 'your system is not a distributed system' and issues of cause-and-effect ordering, plus 'four fallacies of local computing'. One commenter noted the original paper actually dates to 1994, suggesting a 10-year discrepancy, while another argued that pragmatic trade-offs often outweigh strict optimization.
+
+**Tags**: `#distributed computing`, `#fallacies`, `#systems design`, `#retrospective`, `#software engineering`
+
+---
+
+<a id="item-11"></a>
+## [Why AI hasn’t replaced software engineers, and won’t](https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/#atom-everything) ⭐️ 7.0/10
+
+Arvind Narayanan and Sayash Kapoor published an essay arguing that evidence from New York's WARN Act AI disclosure checkbox shows no AI-related mass layoffs in software engineering, countering the narrative that AI will cause widespread job displacement. This matters because software engineering is often considered the most vulnerable profession to AI automation, yet empirical data does not support mass layoffs, suggesting that other professions may be even more resilient and that the AI-job displacement narrative is overstated. The authors identify three real bottlenecks in software engineering that AI cannot easily replace: deciding what to build, verifying and being accountable for deliverables, and deep human understanding of the codebase, business, and environment.
+
+rss · Simon Willison · Jun 14, 23:54
+
+**Background**: The Worker Adjustment and Retraining Notification (WARN) Act is a U.S. law requiring employers with 100+ employees to provide 60 days' notice of mass layoffs. In March 2025, New York became the first state to add an AI disclosure checkbox to WARN filings. The data shows that in the first year, not a single company checked that box, indicating no AI-related layoffs were reported.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/WARN_Act">WARN Act</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#software engineering`, `#job displacement`, `#technology policy`, `#economics`
 
 ---
 
 <a id="item-12"></a>
-## [Open-source pipeline enhances LLM multi-hop reasoning with knowledge graphs](https://www.reddit.com/r/MachineLearning/comments/1u5yyyl/i_built_an_opensource_knowledge_graph_pipeline/) ⭐️ 7.0/10
+## [PrintGuard 2.0: 5MB Few-Shot FDM Failure Detector Runs in Browser and CPython](https://www.reddit.com/r/MachineLearning/comments/1u6e9zc/printguard_20_shufflenetv2_fewshot_prototypical/) ⭐️ 7.0/10
 
-A developer released GraphRAG Studio, an open-source full-stack pipeline (Django + React) that builds knowledge graphs from raw text, detects communities via greedy modularity, and uses hybrid retrieval (dense vectors + BM25) to improve LLM multi-hop reasoning, addressing the 'lost in the middle' problem. This pipeline demonstrates a practical way to enhance retrieval-augmented generation (RAG) for complex queries that require connecting multiple facts, which is a known weakness of standard vector search. It makes advanced knowledge graph and hybrid retrieval techniques accessible to the broader AI community. The pipeline uses spaCy for named entity extraction, NetworkX for graph construction and community detection via greedy_modularity_communities, and Reciprocal Rank Fusion (RRF) combined with a Cross-Encoder for reranking. It also generates community summaries using an LLM to provide global context.
+PrintGuard 2.0 is a complete rewrite of the runtime around the same ShuffleNetV2 + prototypical network model, now a ~5 MB TFLite export via LiteRT, and runs unmodified on CPython and in the browser via Pyodide. This approach demonstrates a portable, few-shot failure detector for FDM printing that can be deployed on edge devices or in the browser with a single codebase, potentially lowering the barrier for real-time quality monitoring in distributed printing environments. The architecture separates platform-specific code via a Platform contract for inference, camera, networking, and state; inference scheduling is dynamic with max-min fairness across cameras; the defect pipeline supports per-printer sensitivity thresholds and actions (alert, pause, cancel) via OctoPrint/Moonraker APIs.
+
+reddit · r/MachineLearning · /u/oliverbravery · Jun 15, 11:47
+
+**Background**: ShuffleNetV2 is a lightweight CNN architecture optimized for speed on mobile and edge hardware. Prototypical networks are a few-shot learning method that classify examples based on distance to class prototypes in an embedding space. LiteRT (formerly TensorFlow Lite) is Google's on-device runtime for efficient ML inference on edge platforms. Pyodide is a Python runtime for the browser based on WebAssembly. FDM (fused deposition modeling) 3D printing is prone to failures like stringing or layer shifting; automated detection helps reduce waste.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://docs.pytorch.org/vision/main/models/shufflenetv2.html">ShuffleNet V2 — Torchvision main documentation</a></li>
+<li><a href="https://medium.com/@ipankhi/when-less-is-more-how-prototypical-networks-redefined-few-shot-learning-6eaa228e9a0c">When Less is More: How Prototypical Networks Redefined Few - Shot ...</a></li>
+<li><a href="https://github.com/google-ai-edge/LiteRT">GitHub - google-ai-edge/ LiteRT : LiteRT , successor to TensorFlow Lite.</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#few-shot learning`, `#prototypical network`, `#TensorFlow Lite`, `#edge AI`, `#FDM printing`
+
+---
+
+<a id="item-13"></a>
+## [Open-source KG pipeline with hybrid retrieval boosts LLM reasoning](https://www.reddit.com/r/MachineLearning/comments/1u5yyyl/i_built_an_opensource_knowledge_graph_pipeline/) ⭐️ 7.0/10
+
+A developer released an open-source full-stack pipeline (Django+React) called GraphRAG Studio that constructs a knowledge graph from text, detects thematic communities, and uses hybrid retrieval (dense vectors, BM25, and graph traversal) paired with cross-encoder reranking to improve LLM multi-hop reasoning. The project is available on GitHub. This open-source pipeline addresses the critical 'lost in the middle' problem and multi-hop query failures in standard vector retrieval, which are key limitations of current RAG systems. By combining knowledge graph traversal with hybrid search, it enables LLMs to reason across disconnected text chunks, significantly improving accuracy for complex questions. The pipeline uses spaCy for named entity recognition, NetworkX for co-occurrence graph construction, and greedy modularity community detection to partition the graph, then generates community summaries to avoid hub node bias. Retrieval fuses dense embeddings, BM25, and knowledge graph traversal results using Reciprocal Rank Fusion (RRF), with final reranking by a cross-encoder for maximum precision.
 
 reddit · r/MachineLearning · /u/Future_Caregiver_643 · Jun 14, 22:38
 
-**Background**: Knowledge graphs represent entities and their relationships, enabling reasoning across connected pieces. Multi-hop reasoning requires a model to combine multiple retrieved facts, which is challenging for standard vector retrieval that only matches on semantic similarity. Hybrid retrieval combines keyword (BM25) and dense vector search to improve recall, while community detection groups related entities for better context summarization.
+**Background**: Knowledge graphs represent entities and their relationships as a network, enabling structured reasoning. Hybrid retrieval combines keyword-based search (like BM25) with semantic vector search to cover both exact matches and conceptual similarity. Multi-hop reasoning requires connecting multiple facts across scattered text, which standard retrieval-augmented generation (RAG) struggles with because vector search alone often misses indirect connections. This pipeline bridges that gap by explicitly traversing the graph.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://grokipedia.com/page/Hybrid_search">Hybrid search</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Okapi_BM25">Okapi BM25 - Wikipedia</a></li>
 <li><a href="https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.community.modularity_max.greedy_modularity_communities.html">greedy_modularity_communities — NetworkX 3.6.1 documentation</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#knowledge graph`, `#hybrid retrieval`, `#LLM`, `#open-source`, `#multi-hop reasoning`
-
----
-
-<a id="item-13"></a>
-## [luau-wasm 0.1a0 enables Luau in Pyodide via WASM wheel](https://simonwillison.net/2026/Jun/13/luau-wasm/#atom-everything) ⭐️ 6.0/10
-
-luau-wasm 0.1a0 has been released as a WebAssembly wheel on PyPI, allowing the Luau scripting language to be used within Pyodide in the browser. This release expands the ecosystem of languages available in Pyodide, enabling Roblox developers and Luau users to run their scripts client-side in the browser without a server. The luau-wasm wheel is built with Emscripten and leverages the recently added PyPI support for WASM wheels, making distribution straightforward through standard Python packaging tools.
-
-rss · Simon Willison · Jun 13, 23:14
-
-**Background**: Luau is a scripting language derived from Lua, primarily used in Roblox for game logic. Pyodide is a Python distribution for the browser based on WebAssembly, allowing Python packages to run client-side. WebAssembly (WASM) wheels are now supported on PyPI, enabling languages like Luau to be packaged and used in browser-based Python environments.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/">Publishing WASM wheels to PyPI for use with Pyodide</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Luau_(programming_language)">Luau (programming language) - Wikipedia</a></li>
-<li><a href="https://pyodide.org/">Pyodide — Version 314.0.0</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#lua`, `#webassembly`, `#pyodide`, `#python`
+**Tags**: `#knowledge graph`, `#RAG`, `#hybrid retrieval`, `#LLM`, `#open-source`
 
 ---
 
 <a id="item-14"></a>
-## [Career Implications of an Evolutionary Algorithms PhD in ML](https://www.reddit.com/r/MachineLearning/comments/1u66q3l/how_does_the_ml_community_view_evolutionary/) ⭐️ 6.0/10
+## [Mapping SQLite result columns to source table.column](https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/#atom-everything) ⭐️ 6.0/10
 
-A mathematics master's student and researcher in evolutionary algorithms (EAs) is questioning how the ML community perceives EA research and whether pursuing a PhD in this area is advisable for a competitive career, especially given the crowded ML field. This discussion highlights the tension between specializing in a less mainstream optimization technique and maintaining career competitiveness in the rapidly evolving ML landscape, which may influence the decisions of many aspiring researchers. The student has several publications in top EA conferences and some in mainstream ML venues like NeurIPS, but is considering switching to a more ML-centric PhD, potentially at a less prestigious institution, to improve career prospects.
+Simon Willison used Claude Code (Opus 4.8) to explore methods for programmatically identifying the source table.column for each result column in arbitrary SQL queries against SQLite, finding solutions via APSW, ctypes, and EXPLAIN output. This research could enable Datasette to enrich query results with column provenance information, making it easier for users to understand data lineage and build more informative data exploration interfaces. The C function sqlite3_column_table_name() is not exposed in Python's standard sqlite3 module, but it can be accessed via ctypes if SQLITE_ENABLE_COLUMN_METADATA is enabled; alternative approaches include using the APSW library or parsing EXPLAIN output.
 
-reddit · r/MachineLearning · /u/NullRecurrentDad · Jun 15, 04:48
+rss · Simon Willison · Jun 13, 23:05
 
-**Background**: Evolutionary algorithms (EAs) are population-based search heuristics inspired by natural evolution, used for optimization problems. However, in modern machine learning, gradient-based methods like stochastic gradient descent are often more efficient, leading some in the ML community to be skeptical of EAs. The student's work focuses on the theory of randomized search heuristics, which includes EAs, and has found intersections with deep learning theory.
+**Background**: Datasette is an open-source tool for exploring and publishing data. Column provenance refers to determining which table and column a result column originates from in a SQL query. SQLite internally tracks this metadata but it is not easily accessible from Python without special compilation flags or alternative libraries.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://orbit.dtu.dk/en/publications/optimizing-linear-functions-with-randomized-search-heuristics-the/">Optimizing Linear Functions with Randomized Search Heuristics ...</a></li>
-<li><a href="https://open.hpi.de/courses/cleanit2021/items/6BLbaaytwOm47gE6x2D0nf">Martin Krejca (HPI) - Randomized Search Heuristics</a></li>
+<li><a href="https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/">Research: Mapping SQLite result columns back to their source ...</a></li>
+<li><a href="https://datasette.io/">Datasette: An open source multi-tool for exploring and ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_Code">Claude Code</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#evolutionary algorithms`, `#PhD advice`, `#machine learning research`, `#career`
+**Tags**: `#SQLite`, `#Datasette`, `#LLM`, `#SQL`, `#column provenance`
 
 ---
 
 <a id="item-15"></a>
-## [Why AI labs send many to conferences?](https://www.reddit.com/r/MachineLearning/comments/1u67koz/why_do_frontier_ai_labs_send_so_many_people_to/) ⭐️ 6.0/10
+## [Quant Firms Flock to ICML 2026 as Diamond Sponsors](https://www.reddit.com/r/MachineLearning/comments/1u64rse/quant_firms_at_icml_2026_d/) ⭐️ 6.0/10
 
-A Reddit user has questioned why frontier AI labs like OpenAI and Anthropic send many employees to top conferences such as ICML and NeurIPS, even when only a few present papers. This question sparks a meta-discussion about the strategic use of conferences by leading AI labs, which can reveal priorities in recruitment, research monitoring, and industry influence. The post notes that few attendees from these labs actually present, suggesting motives beyond paper dissemination, such as recruitment, networking, and staying abreast of emerging research.
+A Reddit user observed that quantitative finance firms are heavily present and sponsoring as Diamond sponsors at ICML 2026, prompting discussion about the reasons for this trend. This trend indicates that quantitative finance is increasingly investing in machine learning research, potentially shaping the direction of ML conferences and influencing academic-industry collaboration. The ICML 2026 sponsor list shows Diamond-level sponsors from the quant finance sector, though specific firm names are not detailed in the post. The observation was made on Reddit's Machine Learning community.
 
-reddit · r/MachineLearning · /u/snekslayer · Jun 15, 05:33
+reddit · r/MachineLearning · /u/Intrepid_Discount_67 · Jun 15, 03:09
 
-**Background**: Conferences like NeurIPS and ICML are major venues for AI research dissemination, but they also serve as hubs for recruitment, collaboration, and networking. Leading labs often send large contingents to scout talent, monitor cutting-edge work, and enhance their brand presence, even if only a handful of employees present papers.
+**Background**: ICML (International Conference on Machine Learning) is a premier academic conference for machine learning research. Quantitative finance firms, such as hedge funds and trading firms, increasingly use ML for predictive modeling and algorithmic trading. Their sponsorship of major conferences signals a growing interest in cutting-edge ML research and talent acquisition.
 
-**Tags**: `#AI labs`, `#conferences`, `#recruitment`, `#industry practices`
-
----
-
-<a id="item-16"></a>
-## [Free Bilingual ML Notebook Course Seeks Feedback](https://www.reddit.com/r/MachineLearning/comments/1u4zbld/im_building_a_free_bilingual_machinelearning/) ⭐️ 6.0/10
-
-The creator has developed an open-source Jupyter notebook repository for machine learning tutorials, available in both English and Persian, and is actively seeking community feedback on its structure and coverage. This resource lowers barriers for Persian-speaking learners and promotes inclusive ML education. Community input can improve the curriculum's pedagogical value. The course covers ML foundations, feature engineering, tree models, clustering, evaluation, time series, anomaly detection, responsible ML, and MLOps. It is designed for hands-on practice with datasets and exercises.
-
-reddit · r/MachineLearning · /u/abolfazl1363 · Jun 13, 19:07
-
-**Background**: Bilingual educational resources help non-native English speakers learn complex topics. Jupyter notebooks allow interactive code execution, making them ideal for ML tutorials. MLOps and responsible ML are emerging areas that ensure models are deployed ethically and maintained effectively.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/MLOps">MLOps - Wikipedia</a></li>
-<li><a href="https://www.oreilly.com/library/view/responsible-machine-learning/9781492090878/">Responsible Machine Learning [Book]</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#machine learning`, `#education`, `#open-source`, `#notebook`, `#bilingual`
+**Tags**: `#Machine Learning`, `#ICML`, `#Quantitative Finance`, `#Sponsorship`, `#Industry Trends`
 
 ---
