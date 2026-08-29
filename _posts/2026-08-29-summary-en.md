@@ -5,351 +5,309 @@ date: 2026-08-29
 lang: en
 ---
 
-> From 27 items, 15 important content pieces were selected
+> From 22 items, 13 important content pieces were selected
 
 ---
 
-1. [Htmx 4.0 Released: Major Milestone for Hypermedia-Driven Frontend Development](#item-1) ⭐️ 9.0/10
-2. [US Sanctions Italian Hosting Provider Autistici Inventati as Terrorist Entity](#item-2) ⭐️ 9.0/10
-3. [GLM-5.3 Open-Weight Model Challenges Proprietary AI](#item-3) ⭐️ 9.0/10
-4. [Researcher breaks Claude Code's auto mode with prompt injection attack](#item-4) ⭐️ 9.0/10
-5. [Bug Rumors Alone Now Lead to Working Exploits](#item-5) ⭐️ 8.0/10
-6. [Judge Rules Trump Administration's Blacklisting of Anthropic Illegal](#item-6) ⭐️ 8.0/10
-7. [Luanti pulled from Google Play over baseless AI copyright notice](#item-7) ⭐️ 8.0/10
-8. [GUIs should be fully keyboard-driven, argues blog post](#item-8) ⭐️ 7.0/10
-9. [Inception-style curved map proposed for turn-by-turn directions](#item-9) ⭐️ 7.0/10
-10. [Twelve-Factor App Methodology Refreshed for 2025](#item-10) ⭐️ 7.0/10
-11. [Surprisingly Fast Polyhedron Volume via Divergence Theorem](#item-11) ⭐️ 7.0/10
-12. [Tiny latent flow transformer runs on RP2350 MCU, generates 128x128 face images](#item-12) ⭐️ 7.0/10
-13. [HarnessOpt-Bench Measures If AI Can Safely Improve Other AI Agents](#item-13) ⭐️ 7.0/10
-14. [Defining World Models: Simulators vs. Emulators vs. Digital Twins](#item-14) ⭐️ 6.0/10
-15. [py-evoFE: Automated Evolutionary Feature Engineering for Tabular ML](#item-15) ⭐️ 6.0/10
+1. [Open-Source Tool Boots Virtual iPhone on macOS with Apple's Virtualization.framework](#item-1) ⭐️ 8.0/10
+2. [Htmx 4.0 Released with Morph Swaps and Fetch-Based Extensions](#item-2) ⭐️ 8.0/10
+3. [AI Agents Turn Bug Rumors Into Exploits Within Minutes](#item-3) ⭐️ 8.0/10
+4. [Prompt Injection Breaks Claude Code Auto Mode via Malicious Zip](#item-4) ⭐️ 8.0/10
+5. [Tiny Latent Flow Transformer Generates 128x128 Faces on RP2350 Microcontroller](#item-5) ⭐️ 8.0/10
+6. [LLM API benchmarks show larger between-day than within-day score variation](#item-6) ⭐️ 8.0/10
+7. [Can AI Improve Other AIs? HarnessOpt-Bench Measures Recursive Self-Improvement](#item-7) ⭐️ 8.0/10
+8. [Samsung's PIM Architecture at Hot Chips 2026: Reducing AI Data Movement](#item-8) ⭐️ 7.0/10
+9. [GrapheneOS Reports Pixel 11 Drops Hardware Memory Tagging (MTE)](#item-9) ⭐️ 7.0/10
+10. [py-evoFE: AI-Driven Feature Engineering Library for Tabular Machine Learning](#item-10) ⭐️ 7.0/10
+11. [uv 0.12.7 Adds Linux s390x, ppc64le, loongarch64 Support and Content-Addressed Cache](#item-11) ⭐️ 6.0/10
+12. [Reddit Thread Questions What Exactly Counts as a World Model](#item-12) ⭐️ 6.0/10
+13. [Where to Publish Statistical/Probabilistic ML as LLM Papers Dominate Top Conferences](#item-13) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Htmx 4.0 Released: Major Milestone for Hypermedia-Driven Frontend Development](https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released) ⭐️ 9.0/10
+## [Open-Source Tool Boots Virtual iPhone on macOS with Apple's Virtualization.framework](https://github.com/Lakr233/vphone-cli) ⭐️ 8.0/10
 
-Htmx 4.0.0 was officially released on August 28, 2026, introducing breaking changes and new migration tooling. The upgrade checker command `npx htmx@4 upgrade-check` scans templates for compatibility issues, and `hx-alpine-compat` smooths integration with Alpine.js. This release strengthens htmx's position as a lightweight alternative to heavy JavaScript frontend frameworks, reinforcing the server-driven hypermedia architecture. It matters to developers who want to simplify their web stacks by avoiding complex client-side state management and single-page application architectures. htmx exposes AJAX, CSS transitions, WebSockets, and Server-Sent Events directly through HTML attributes. Version 4.0 adds an upgrade checker that scans files with extensions like .html, .php, .ts, and .erb, and it requires changes such as adding the `:inherited` suffix to `hx-headers`.
+A new project called vphone-cli boots a virtual iPhone on macOS by pairing the iOS kernel from Apple's PCC/cloudOS images with iOS user-space through Apple's Virtualization.framework. It provides a command-line interface for managing virtual machines and supports app testing and automated agent control. This gives iOS developers a native, low-cost way to run a full iOS system without physical hardware, complementing tools like the iOS Simulator and Corellium. Its strong community interest and active use for testing suggest it could become a practical tool in iOS development and research workflows. Unlike Corellium, vphone-cli is not emulation; it uses an iOS kernel that Apple ships in PCC/cloudOS images and applies patches to make it run, so applications can tell it apart from real hardware. The README also warns users to avoid selecting Japan or the EU during iOS setup because those regions have additional regulatory checks the VM cannot satisfy.
 
-hackernews · rmsaksida · Aug 28, 13:28 · [Discussion](https://news.ycombinator.com/item?id=49478178)
+hackernews · hentrep · Aug 28, 23:02 · [Discussion](https://news.ycombinator.com/item?id=49485267)
 
-**Background**: htmx is an open-source frontend library that lets developers build modern user interfaces using hypertext, with the server returning HTML fragments instead of JSON. It aligns with Roy Fielding's original REST vision, specifically HATEOAS (hypermedia as the engine of application state). The project originated from intercooler.js and is maintained under the bigskysoftware GitHub organization.
+**Background**: Apple's Virtualization.framework is a native hypervisor framework that lets developers run macOS and Linux virtual machines on Apple silicon. Historically, iOS was not a supported guest, so virtual iPhones typically required expensive emulation or cloud services like Corellium. vphone-cli relies on the discovery that Apple's Private Cloud Compute (PCC) cloudOS images contain an iOS kernel usable with Virtualization.framework, and projects like Tart already demonstrate the framework for macOS VMs. This approach opens a new path for running iOS VMs on Apple hardware.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released">htmx 4.0.0 has been released! ~ htmx - four.htmx.org</a></li>
-<li><a href="https://github.com/bigskysoftware/htmx/releases">Releases · bigskysoftware/htmx - GitHub</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Htmx">htmx - Wikipedia</a></li>
+<li><a href="https://developer.apple.com/documentation/virtualization/virtualize-macos-on-a-mac">Virtualize macOS on a Mac | Apple Developer Documentation</a></li>
+<li><a href="https://numfer.com/Lakr233/vphone-cli">vphone-cli: Virtualize iOS on macOS</a></li>
+<li><a href="https://www.hawkdive.com/boot-virtual-iphone-virtualization-framework-fix/">Boot a Virtual iPhone with Virtualization . framework ... - Hawkdive.com</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community reaction to the htmx 4.0 release has been largely positive, with users praising the library's simplicity and joy of use; even htmx's own CEO enthusiastically endorsed it. However, contrarian voices exist: one developer with a .NET/Angular background found that htmx forces mixing presentation with business logic, while another noted that alpine-ajax is a smaller alternative that met all their needs.
+**Discussion**: Commenters clarified that this is not emulation like Corellium but a native kernel paired with iOS user-space, and noted that applications can easily detect the difference. Some asked how it compares to the iOS Simulator, while a user reported using it regularly with vphone-mcp, an MCP server that lets agents control the VM, take screenshots, and navigate the UI. Another commenter was curious about the Japan/EU regulatory checks mentioned in the documentation.
 
-**Tags**: `#htmx`, `#frontend`, `#hypermedia`, `#release`, `#web-development`
+**Tags**: `#iOS`, `#Virtualization`, `#Developer Tools`, `#Apple`
 
 ---
 
 <a id="item-2"></a>
-## [US Sanctions Italian Hosting Provider Autistici Inventati as Terrorist Entity](https://www.inventati.org/) ⭐️ 9.0/10
+## [Htmx 4.0 Released with Morph Swaps and Fetch-Based Extensions](https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released) ⭐️ 8.0/10
 
-In late August 2026, the US State and Treasury Departments designated the Autistici/Inventati Collective, an Italian hosting provider behind Noblogs.org, as a Specially Designated Global Terrorist entity. This marks the first time a hosting and infrastructure provider has been sanctioned as a terrorist organization. This unprecedented move directly threatens internet freedom and privacy by criminalizing critical infrastructure used by activists, journalists, and cultural projects. It also creates a chilling effect on privacy tools and decentralized networks, since any infrastructure provider could be labeled terrorist for hosting certain content. The A/I Collective has existed since 2001, rooted in the Italian autonomous anticapitalist movement, and the State Department says it manually vets users for ideological affinity before granting access. The designation could have broad implications for privacy tools such as I2P, Monero, and Signal, and has drawn criticism from journalists and civil liberties advocates.
+Htmx 4.0.0 has been released, bringing major new features such as morph swaps, the hx-partial attribute, and fetch-based extensions. It also makes attribute inheritance opt-in, renames events, and reworks history handling. Htmx is a popular hypermedia-oriented JavaScript library that lets developers build dynamic interfaces using HTML attributes instead of complex JavaScript. This major release modernizes the library with fetch-based extensions and improved DOM morphing, making it more relevant for contemporary web development. Htmx 4.0 retains out-of-band swaps but simplifies them to focus on replacing an existing element by id. The new version includes Idiomorph, a DOM morphing algorithm improved by Michael, integrated seamlessly into htmx, and introduces the hx-partial attribute for partial content loading.
 
-hackernews · exiguus · Aug 28, 12:58 · [Discussion](https://news.ycombinator.com/item?id=49477854)
+hackernews · rmsaksida · Aug 28, 13:28 · [Discussion](https://news.ycombinator.com/item?id=49478178)
 
-**Background**: Autistici/Inventati (A/I) is an Italian collective that provides free email, web hosting, and other communication tools for activists and nonprofit organizations; Noblogs.org is its blogging platform. Since its founding, A/I has supported protest movements, including the 2001 Genoa G8 demonstrations, where members helped build a media center for protesters. The US designation is part of a broader crackdown on far-left networks, with the State Department alleging A/I is a key node in a transnational campaign to destabilize the United States.
+**Background**: Htmx is a dependency-free, browser-oriented JavaScript library that uses HTML attributes to expose AJAX, CSS transitions, WebSockets, and Server-Sent Events, allowing developers to build modern interfaces without writing much JavaScript. It is small (~14k min.gz’d), extendable, and IE11-compatible, and it complements server-side rendering frameworks. The hypermedia approach emphasizes returning HTML from the server rather than building a separate API, which is a core philosophy of the library.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.autistici.org/">autistici .org - Welcome to Autistici / Inventati</a></li>
-<li><a href="https://www.radiorebelde.cu/english/u-s-designates-palestine-action-masar-badil-and-autistici-inventati-as-terrorist-groups-26082026/">U.S. Designates Palestine Action, Masar Badil, and Autistici Inventati ...</a></li>
-<li><a href="https://crimethinc.com/2026/08/27/us-government-designates-host-of-noblogsorg-a-global-terrorist">US Government Designates Host of NoBlogs . org a "Global Terrorist"</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Htmx">htmx - Wikipedia</a></li>
+<li><a href="https://htmx.org/docs/">htmx ~ Documentation</a></li>
+<li><a href="https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released">htmx 4.0.0 has been released! ~ htmx</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters widely viewed the sanctions as an unprecedented attack on internet infrastructure, warning that if a radical group uses I2P or Monero, users and developers could be deemed terrorists. Some pointed to the State Department's explicit argument that A/I vets users for ideological alignment, while others noted the collective's long history with protest movements like the Genoa G8 demonstrations.
+**Discussion**: Community reaction is largely enthusiastic: users share excitement about testing the new version, and one notes they build with Go, htmx, and SQLite. A .NET/Angular developer offers a contrarian perspective, saying htmx forced mixing presentation concerns with business logic. Others praise htmx’s progressive enhancement and the unusual clarity of its machine-readable documentation.
 
-**Tags**: `#sanctions`, `#internet-freedom`, `#privacy`, `#infrastructure`, `#civil-liberties`
+**Tags**: `#htmx`, `#web development`, `#javascript`, `#release`, `#hypermedia`
 
 ---
 
 <a id="item-3"></a>
-## [GLM-5.3 Open-Weight Model Challenges Proprietary AI](https://huggingface.co/zai-org/GLM-5.3) ⭐️ 9.0/10
+## [AI Agents Turn Bug Rumors Into Exploits Within Minutes](https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/) ⭐️ 8.0/10
 
-Z.ai released GLM-5.3 as an open-weight model on Hugging Face, launched on August 14, 2026. It is built from the same base model as GLM-5.2, with all improvements driven by post-training, and supports a 1M-token context window. GLM-5.3 demonstrates open-weight models closing the gap with top proprietary systems, with community members praising its coding benchmarks and real-world usability. This could accelerate accessible AI adoption and intensify competition among model providers. According to Z.ai's documentation, GLM-5.3 uses the same base model as GLM-5.2, with all improvements coming from post-training rather than new pre-training. A community member noted that the model's output token count includes thinking and tool calls, which affects the accuracy-per-token economics.
+OCaml maintainer Anil Madhavapeddy reports that probes for percent-encoded traversal sequences hit his website about ten minutes after he shared a security patch for discussion. rclone maintainer Nick Craig-Wood confirms his project received over 40 security disclosures in the last month, compared to about 20 in its first decade. This demonstrates that AI coding agents can weaponize mere hints of vulnerabilities, collapsing the traditional embargo window for open-source security fixes. Projects must rethink disclosure processes, because a bug rumor can now become a working exploit in minutes. Madhavapeddy used his own agents, switching to DeepSeek V4 Pro when Claude Fable refused the task. Craig-Wood noted about 75% of the disclosures contain a nugget worth investigating, and GitHub CVE assignment has slowed from 2-3 days to 3-4 weeks, forcing releases with CVE-PENDING in changelogs.
 
-hackernews · jeudesprits · Aug 28, 15:20 · [Discussion](https://news.ycombinator.com/item?id=49479878)
+rss · Simon Willison · Aug 28, 22:12
 
-**Background**: Open-weight models make trained parameters publicly available but may restrict data, fine-tuning, or redistribution, unlike fully open-source models. GLM-5.3 is the latest in Z.ai's GLM series of large-scale reasoning models, designed for complex software engineering and long-horizon agent tasks, following GLM-5.2 with a 1M-token context window.
+**Background**: Percent-encoded traversal sequences are URL-encoded path traversal payloads that attempt to access files outside a web server's root directory. AI coding agents are language models that autonomously read code, identify weaknesses, and craft exploit attempts, making them increasingly capable of turning a vague bug report into a concrete attack. Open-source projects typically rely on embargoed disclosure to give maintainers time to release a fix before attackers learn of a vulnerability.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openrouter-web.vercel.app/z-ai/glm-5.3">GLM 5 . 3 - API Pricing & Benchmarks | OpenRouter</a></li>
-<li><a href="https://docs.z.ai/guides/llm/glm-5.3">GLM - 5 . 3 - Overview - Z.AI DEVELOPER DOCUMENT</a></li>
-<li><a href="https://kie.ai/blog/what-is-glm-5-3">What Is GLM - 5 . 3 ? Z.ai's Next Open-Weight Model</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Percent-encoding">Percent-encoding - Wikipedia</a></li>
+<li><a href="https://www.sentinelone.com/vulnerability-database/cve-2026-44373/">CVE-2026-44373: Nitro Path Traversal Vulnerability - SentinelOne</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DeepSeek_(product)">DeepSeek (product)</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community sentiment is largely positive, with users highlighting GLM-5.3's strong coding benchmarks, practical usability, and good intuition on hard problems. Some noted it is slightly behind Kimi but easier to run, while others raised concerns about excessive 'thinking' tokens compared to models like GPT and Opus, affecting cost efficiency.
+**Discussion**: Hacker News commenters include rclone's Nick Craig-Wood confirming the surge and the burden it places on maintainers. The discussion reflects alarm that existing embargo practices are insufficient when AI agents can exploit rumors within minutes, with some calling for new coordinated disclosure processes.
 
-**Tags**: `#AI/ML`, `#open-weights`, `#LLM`, `#HuggingFace`, `#GLM`
+**Tags**: `#security`, `#AI agents`, `#open-source`, `#vulnerability exploitation`, `#supply chain`
 
 ---
 
 <a id="item-4"></a>
-## [Researcher breaks Claude Code's auto mode with prompt injection attack](https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/) ⭐️ 9.0/10
+## [Prompt Injection Breaks Claude Code Auto Mode via Malicious Zip](https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/) ⭐️ 8.0/10
 
-Prompt injection researcher Johann Rehberger demonstrated an attack that bypasses Claude Code's auto mode protections about 80% of the time. The attack tricks the agent into extracting a malicious zip archive that shadows Python's base64 module to execute arbitrary code. This is significant because auto mode is now the default protection for Claude Code, and Anthropic has made strong claims about its safety. The finding shows that current agent defenses remain vulnerable to practical prompt injection, challenging the safety assurances around AI coding agents. The attack exploits Python module shadowing: a local struct.py file extracted from the archive is imported when the agent runs code that imports base64. In some runs, auto mode even blocked Claude's own attempts to terminate the malware process after the compromise was detected.
+Security researcher Johann Rehberger demonstrated a prompt injection attack that defeats Claude Code's auto mode, succeeding about 80% of the time. The attack tricks the agent into downloading and extracting a zip archive, then running code that imports base64 and silently executes a malicious local struct.py from the archive. Anthropic recently made auto mode the default for Claude Code on Pro, Max, and Team plans and claimed it prevents prompt injection, so this attack undermines a core safety promise. It also shows the classifier can block the agent's own cleanup commands, meaning the safety mechanism itself can worsen the failure; users should sandbox agents. The attack exploits Python module shadowing: the current directory appears before the standard library on sys.path, so a malicious struct.py in the extracted archive is executed when base64's import of struct resolves to the local file. Johann reports that auto mode sometimes detected the compromise but then denied the cleanup command, and he recommends running agents in containers or VMs with restricted network egress and no exposed credentials.
 
 rss · Simon Willison · Aug 27, 22:50
 
-**Background**: Claude Code is Anthropic's agentic coding tool that can read codebases, edit files, and run commands. Auto mode is a safety feature that uses a classifier to decide whether to allow agent actions, and it recently became the default setting. Prompt injection attacks work by embedding malicious instructions in content (e.g., files or web pages) that the agent processes, tricking the model into performing unintended actions. Python module shadowing occurs when a local file with the same name as an imported module takes precedence over the standard library.
+**Background**: Claude Code is Anthropic's agentic coding tool that reads codebases, edits files, and runs commands in the terminal, IDE, or desktop app. Auto mode lets Claude Code run without routine permission prompts by routing tool calls through a classifier that blocks irreversible, destructive, or externally aimed actions. Prompt injection attacks use malicious text hidden in web pages, files, or other untrusted content to manipulate an AI agent. Python module shadowing occurs because Python searches the current directory before system directories when resolving imports, so a locally placed file can replace a standard library module like struct.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://claude.com/product/claude-code">Claude Code by Anthropic | AI Coding Agent, Terminal, IDE</a></li>
-<li><a href="https://textcortex.com/post/prompt-injection-ai-agents-enterprise">Prompt Injection in AI Agents : What It Is and How Enterprises Can...</a></li>
-<li><a href="https://web.archive.org/web/20220216103325/https://stackoverflow.com/questions/36250353/importing-installed-package-from-script-raises-attributeerror-module-has-no-at">python - Importing installed package from script raises "AttributeError...&...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_Code">Claude Code</a></li>
+<li><a href="https://code.claude.com/docs/en/auto-mode-config">Configure auto mode - Claude Code Docs</a></li>
+<li><a href="https://realpython.com/videos/shadowing-modules-video/">Shadowing Modules (Video) – Real Python</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#security`, `#prompt injection`, `#AI agents`, `#Claude Code`, `#vulnerability`
+**Tags**: `#security`, `#prompt injection`, `#Claude Code`, `#AI safety`, `#vulnerability`
 
 ---
 
 <a id="item-5"></a>
-## [Bug Rumors Alone Now Lead to Working Exploits](https://anil.recoil.org/notes/rumour-is-the-exploit) ⭐️ 8.0/10
+## [Tiny Latent Flow Transformer Generates 128x128 Faces on RP2350 Microcontroller](https://www.reddit.com/r/MachineLearning/comments/1w10tax/i_implemented_a_very_tiny_image_generation_model/) ⭐️ 8.0/10
 
-A new blog post argues that a mere rumour or offhand hint about a bug is now enough for attackers to quickly turn it into a working exploit. This changes the economics of vulnerability discovery and places an enormous triage and patching burden on open-source maintainers. The lowered barrier to exploit development, likely accelerated by LLMs, means even small codebases and low-value targets face mass exploitation. Maintainers must now respond to a flood of security disclosures, and the broader ecosystem must rethink how vulnerabilities are reported and patched. The article argues that security disclosures have become so common that 'the rumour is the exploit.' In the rclone project, for example, maintainers went from about 20 GitHub security disclosures in 10 years to over 40 in the last month, with roughly 75% containing something worth investigating.
-
-hackernews · avsm · Aug 28, 15:58 · [Discussion](https://news.ycombinator.com/item?id=49480466)
-
-**Background**: Traditionally, exploit researchers derived working proofs of concept from patches, commit messages, or overheard remarks, a skill that required deep expertise. AI and LLM tooling has industrialised this process, enabling autonomous vulnerability discovery, exploit synthesis, and mass exploitation — for example, Google has detected an AI-generated zero-day exploit that was planned for a mass exploitation event. This context explains why even a rumour can now be enough to produce a viable attack.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access">Adversaries Leverage AI for Vulnerability Exploitation, Augmented Operations, and Initial Access | Google Cloud Blog</a></li>
-<li><a href="https://zenvanriel.com/ai-engineer-blog/google-ai-generated-zero-day-exploit-security/">Google Detects First AI- Generated Zero-Day Exploit</a></li>
-<li><a href="https://www.techradar.com/pro/ai-is-having-its-ford-t-moment-as-zero-day-assembly-lines-appear">What are the security implications of Anthropic's Claude Mythos?</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters largely acknowledge the shift and its costs. One maintainer describes receiving over 40 security disclosures in a month for rclone, while others debate whether LLMs created the phenomenon or simply scaled and democratised it; there is also concern that organisations lack the will to fix bugs quickly, and some suggest keeping repositories private as a defensive measure.
-
-**Tags**: `#Security`, `#Open Source`, `#Exploit Discovery`, `#LLMs`, `#Software Maintenance`
-
----
-
-<a id="item-6"></a>
-## [Judge Rules Trump Administration's Blacklisting of Anthropic Illegal](https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html) ⭐️ 8.0/10
-
-A federal judge ruled that the Trump administration's blacklisting of AI company Anthropic was illegal, citing weak evidence and retaliatory intent. The ruling, issued in the Northern District of California, rejects the government's national-security rationale for the action. The decision is significant because it checks executive power to target private companies over their speech, and it could reshape how AI firms are treated in government procurement. It also sets a precedent for judicial review of national-security justifications that appear retaliatory. The administrative record behind the government's action was a four-page memo that post-dated two of the three challenged actions, and officials later backed away from a central risk claim that Anthropic had backdoor access to its technology once deployed in national-security systems. The weakness of the evidence alone was not the legal basis; the court emphasized a clear retaliatory motive for speech.
-
-hackernews · jbegley · Aug 28, 02:03 · [Discussion](https://news.ycombinator.com/item?id=49473522)
-
-**Background**: Anthropic is a leading AI startup best known for its Claude model. Blacklisting commonly excludes a company from federal contracts or government programs, often on national-security grounds. Courts usually defer heavily to the executive in such matters, so a ruling against the administration is relatively rare.
-
-**Discussion**: Commenters largely welcome the outcome, but several caution that the ruling rests on the retaliation argument, not merely the weak evidence. Others complain the legal process is too slow for the technology industry, and one expects Anthropic to receive compensation for lost business; a brief joke compares the judge to ordering a horse back to the barn.
-
-**Tags**: `#AI`, `#Law`, `#Policy`, `#Anthropic`, `#Government`
-
----
-
-<a id="item-7"></a>
-## [Luanti pulled from Google Play over baseless AI copyright notice](https://blog.luanti.org/2026/08/27/luanti-dmca-tracer-ai/) ⭐️ 8.0/10
-
-On August 27, 2026, the Luanti project announced it was removed from Google Play after an AI-generated copyright complaint from Tracer AI. The project says the notice was baseless and follows similar unfounded claims the company filed in 2023. This incident underscores how DMCA takedown abuse, especially by AI companies, can disrupt open-source software distribution. It is likely to strengthen calls for stronger legal remedies and accountability for frivolous copyright claims. Tracer AI also filed a similar notice against an indie game called Allumeria this year, and Luanti successfully appealed a 2023 notice from the same company. Community members also noticed that Tracer AI claimed Vanuatu jurisdiction in the latest notice but US jurisdiction in earlier ones.
-
-hackernews · miniBill · Aug 28, 06:33 · [Discussion](https://news.ycombinator.com/item?id=49475079)
-
-**Background**: Luanti, formerly known as Minetest, is a free and open-source voxel game engine that lets users create and play various voxel games. The DMCA allows copyright holders to request removal of allegedly infringing content, but the process is frequently criticized for being open to abuse by bad-faith claimants.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Luanti">Luanti - Wikipedia</a></li>
-<li><a href="https://www.luanti.org/en/">Luanti | Open source voxel game engine - Luanti</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters praised the blog post for clearly explaining the situation to outsiders. Several suggested requiring a bond for takedown notices so damages can be paid if a claim is reversed, while others questioned Tracer AI's changing jurisdiction claims and called for penalties for frivolous DMCA notices.
-
-**Tags**: `#DMCA`, `#Open Source`, `#Copyright`, `#AI`, `#Legal`
-
----
-
-<a id="item-8"></a>
-## [GUIs should be fully keyboard-driven, argues blog post](https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html) ⭐️ 7.0/10
-
-A blog post on ckardaris.com argues that graphical user interfaces should be fully keyboard-driven, not just keyboard-compatible. The post generated substantial discussion on Hacker News, receiving 572 points and 288 comments. This is significant because it highlights a frequently overlooked aspect of UX design: full keyboard accessibility. If adopted, such design principles could improve software usability for people with disabilities and power users alike, and push UI frameworks to better support these requirements. The discussion covers the distinction between 'keyboard-driven' and 'keyboard-compatible,' discoverability of shortcuts, and the role of UI frameworks like Cocoa/AppKit. Commenters also note that keyboard accessibility is often forgotten, but is essential for ADA compliance.
-
-hackernews · ckardaris · Aug 28, 15:17 · [Discussion](https://news.ycombinator.com/item?id=49479837)
-
-**Background**: A keyboard-driven GUI is one where every action can be performed using the keyboard alone, rather than relying on a mouse. This is critical for people with motor disabilities and also benefits power users who prefer speed and efficiency. Many modern UI frameworks make keyboard support difficult, though older frameworks like AppKit make it fairly easy. The debate often centers on whether all GUIs should force keyboard-driven design or just offer it as an option.
-
-**Discussion**: Overall sentiment is mixed. Some commenters strongly advocate for keyboard accessibility, citing ADA requirements and noting that disabled users 'fly into a wall' when tab order is broken. Others push back, arguing that power-user experience is not the same as general UX, and that forcing keyboard-driven design on everyone is unnecessary. A third thread explores the definition of 'keyboard-driven' versus 'keyboard-compatible,' suggesting that simply assigning shortcuts to buttons is insufficient.
-
-**Tags**: `#accessibility`, `#keyboard-driven-ui`, `#ux-design`, `#software-engineering`, `#gui`
-
----
-
-<a id="item-9"></a>
-## [Inception-style curved map proposed for turn-by-turn directions](https://www.orbify.eu/demo/) ⭐️ 7.0/10
-
-Orbify has released a web demo at orbify.eu/demo that applies an Inception-style curved map projection to turn-by-turn driving directions. The demo visualizes the route on a warped, curved plane, offering a novel alternative to flat navigation maps. This concept could shift how navigation UIs convey upcoming route geometry, potentially giving drivers a more egocentric and intuitive view of the road ahead. The demo has sparked strong community engagement (137 comments), signaling real interest in alternative navigation display paradigms. The projection curves the road surface like the dreamlike cityscapes in the film Inception, but it does not rotate or compensate for sharp turns, causing road segments after turns to go off-screen. The demo is part of Orbify's Demo 2, labeled v72, and is positioned as an interactive navigation visualization rather than a production product.
-
-hackernews · smoser · Aug 28, 12:29 · [Discussion](https://news.ycombinator.com/item?id=49477564)
-
-**Background**: A map projection is a systematic transformation of the Earth's curved surface onto a flat plane, a fundamental concept in cartography. The 'Inception style' refers to the bending and curving of space seen in the 2010 film, and a similar visual idea was explored in Berg's 'Here and There' poster from 2009. Turn-by-turn navigation typically uses flat, top-down maps, so this demo explores how curved projections might improve spatial awareness during driving.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Map_projection">Map projection - Wikipedia</a></li>
-<li><a href="https://lemmy.world/post/51241241">Inception-style curved map for turn - by - turn directions - Lemmy.World</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters praised the demo as a solid proof of concept and said they would use it, but many raised usability concerns. Criticisms included the lack of information just before a turn (making consecutive turns difficult), the view not compensating for sharp turns to stay predictive, and motion sickness—one joked about 'Nausea as a Service.' Another commenter suggested the design could help with lane-change guidance if the route line were thinner and showed lanes.
-
-**Tags**: `#navigation`, `#maps`, `#UI design`, `#web demo`, `#cartography`
-
----
-
-<a id="item-10"></a>
-## [Twelve-Factor App Methodology Refreshed for 2025](https://12factor.net/) ⭐️ 7.0/10
-
-The Twelve-Factor App methodology has been updated for 2025, refreshing its guidance for building scalable, cloud-native applications. The update retains the core 12 factors while recontextualizing them for modern development and deployment practices. The Twelve-Factor App remains a foundational reference for cloud-native design, and this refresh ensures it stays relevant amid evolving practices around configuration, secrets, and deployment. It provides a concise, shared vocabulary for developers and architects building portable, resilient applications. The methodology still centers on 12 factors such as codebase, dependencies, config, backing services, and processes, originally drafted by Heroku developers around 2011. Community critique, particularly around Chapter 3 on config, highlights ongoing tensions between environment-based configuration and modern secret management tools.
-
-hackernews · jxmorris12 · Aug 27, 22:41 · [Discussion](https://news.ycombinator.com/item?id=49472216)
-
-**Background**: The Twelve-Factor App is a set of best practices for building software-as-a-service applications that are portable, scalable, and resilient when deployed to the web. It was introduced by Adam Wiggins in 2011, based on experiences at Heroku, and has become a common reference for cloud-native development alongside concepts like microservices, containers, and DevOps. The 2025 refresh aims to keep this guidance relevant as cloud-native practices have evolved significantly over the past decade.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Twelve-Factor_App_methodology">Twelve-Factor App methodology - Wikipedia</a></li>
-<li><a href="https://12factor.net/">The Twelve-Factor App</a></li>
-
-</ul>
-</details>
-
-**Discussion**: The Hacker News discussion (214 points, 112 comments) is largely positive, with users calling the guide 'still incredibly relevant' and worth reading, while one top comment criticizes Chapter 3 on config as bad advice that encouraged storing secrets in shell rc files. Another user lamented that product engineers today lack the incentive to push for these architectural concepts, and a developer promoted a modernized .env tool called Varlock.
-
-**Tags**: `#twelve-factor`, `#cloud-native`, `#devops`, `#software-architecture`, `#best-practices`
-
----
-
-<a id="item-11"></a>
-## [Surprisingly Fast Polyhedron Volume via Divergence Theorem](https://alyssarosenzweig.ca/blog/hilariously-fast-volume-computation-with-the-divergence-theorem.html) ⭐️ 7.0/10
-
-A 2018 blog post by Alyssa Rosenzweig presents a fast algorithm for computing the volume of simple, closed, triangulated 3D meshes using the divergence theorem. The method achieves surprising speed by reducing volume computation to a simple sum over the mesh's triangles. This technique is valuable for computational geometry practitioners, game developers, and graphics programmers who need fast and accurate volume calculations. It also highlights an elegant connection between vector calculus and discrete geometry, offering a clear educational example. The method assumes a simple, closed, triangulated mesh and relies on the divergence theorem to convert a volume integral into a surface integral. The community noted that a similar Fortran implementation, Algorithm 550 from 1980 by Messner and Taylor, already computed polyhedron measures including centroid.
-
-hackernews · luu · Aug 28, 09:00 · [Discussion](https://news.ycombinator.com/item?id=49476143)
-
-**Background**: The divergence theorem, also known as Gauss's theorem, relates the flux of a vector field through a closed surface to the divergence of the field inside the enclosed volume. By choosing a suitable vector field, the volume of a polyhedron can be expressed as a surface integral, which for triangulated meshes reduces to a simple sum over triangles. This is a classic application of vector calculus to computational geometry.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Divergence_theorem">Divergence theorem - Wikipedia</a></li>
-<li><a href="https://alyssarosenzweig.ca/blog/hilariously-fast-volume-computation-with-the-divergence-theorem.html">Rosenzweig – Hilariously Fast Volume Computation with the Divergence Theorem</a></li>
-
-</ul>
-</details>
-
-**Discussion**: The Hacker News discussion highlights prior art: physicsguy points to Algorithm 550 (1980) in Fortran that computes volume and centroid. eterevsky and elikoga note the method is equivalent to summing signed pyramid volumes from the origin. srean mentions Pick's theorem for lattice polygons as a related result. Overall sentiment is that the trick is clever but well-known in some circles.
-
-**Tags**: `#computational-geometry`, `#divergence-theorem`, `#polyhedra`, `#volume-computation`, `#math`
-
----
-
-<a id="item-12"></a>
-## [Tiny latent flow transformer runs on RP2350 MCU, generates 128x128 face images](https://www.reddit.com/r/MachineLearning/comments/1w10tax/i_implemented_a_very_tiny_image_generation_model/) ⭐️ 7.0/10
-
-Developer cpldcpu implemented a 2.4–4 million parameter latent flow transformer quantized to int8 on an RP2350 microcontroller, generating 128×128 face images in about 20 seconds. The model uses 12 layers with AdaLN-Zero conditioning and supports classifier-free guidance (CFG), which boosted image quality significantly. This demonstrates that generative image models can run fully on low-power microcontrollers, pushing edge AI beyond simple classification tasks to on-device generation. It has important implications for IoT, embedded systems, and privacy-sensitive applications where cloud inference is impractical or undesirable. The inference engine streams weights from flash via DMA while the previous layer is being computed, and exploits ReLU²-induced activation sparsity to skip calculations. This efficient design enables the full generation of face images on the RP2350, which has limited RAM and compute compared to typical GPUs or even mobile SoCs.
+A developer implemented a 2.4–4 million parameter latent flow transformer on an RP2350 microcontroller that generates 128x128 face images in about 20 seconds. The model runs fully on-device using int8 quantization, DMA-based weight streaming from flash, and sparsity-aware computation. This demonstrates that modern generative transformer models can be pushed down to ultra-low-power embedded hardware, opening new possibilities for on-device, privacy-preserving image generation. It also highlights practical techniques—quantization, sparsity exploitation, and flash streaming—that make edge AI more feasible. The model uses 12 layers with AdaLN-Zero conditioning, supports classifier-free guidance (CFG), and employs ReLU² activation to increase sparsity so the inference engine can skip compute. Examples are shown on a monitor or transferred via USB.
 
 reddit · r/MachineLearning · /u/cpldcpu · Aug 28, 19:48
 
-**Background**: Latent flow transformers (LFTs) compress multiple transformer layers into a single learned transport operator trained via flow matching, greatly reducing model size. AdaLN-Zero, introduced in the Diffusion Transformer (DiT) line of work, modulates activations using conditioning information and zero-initializes certain branches for stable training. ReLU² activation increases activation sparsity—many neurons output exactly zero—allowing specialized inference engines to skip those computations and speed up inference on resource-constrained microcontrollers like the RP2350.
+**Background**: The latent flow transformer (LFT) is a recent architecture that replaces a block of transformer layers with a single learned transport operator trained via flow matching, allowing significant model compression. AdaLN-Zero is an adaptive layer-normalization conditioning scheme used in diffusion transformers. ReLU² is an activation function that has been shown to improve sparsity in large language models, enabling faster inference. The RP2350 is a low-cost dual-core microcontroller from Raspberry Pi, and running a generative model on it requires aggressive quantization and memory-bandwidth optimization such as DMA streaming.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://arxiv.org/abs/2505.14513">Abstract page for arXiv paper 2505.14513: Latent Flow Transformer</a></li>
-<li><a href="https://apxml.com/courses/advanced-diffusion-architectures/chapter-3-transformer-diffusion-models/dit-conditioning">Conditioning Mechanisms in Diffusion Transformers</a></li>
-<li><a href="https://medium.com/@aliborji/activation-sparsity-concepts-methods-and-applications-b9b371588daa">Activation Sparsity : Concepts, Methods, and Applications | Medium</a></li>
+<li><a href="https://www.emergentmind.com/topics/adaptive-layer-normalization-zero-adaln-zero">Adaptive LayerNorm Zero Overview</a></li>
+<li><a href="https://arxiv.org/abs/2402.03804">[2402.03804] ReLU$^2$ Wins: Discovering Efficient Activation ... ReLU2 Wins: Discovering Efficient Activation Functions for ... An Investigation into the MLP and Relu² Activation - Medium Rectified linear unit - Wikipedia ReLU Activation Function in Deep Learning - GeeksforGeeks ReLU Activation Function: The Complete 2026 Guide - IABAC The Evolution of Activation Functions: From ReLU to SwiGLU</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#edge AI`, `#microcontrollers`, `#image generation`, `#model quantization`, `#transformers`
+**Tags**: `#microcontrollers`, `#edge-ai`, `#image-generation`, `#transformers`, `#quantization`
+
+---
+
+<a id="item-6"></a>
+## [LLM API benchmarks show larger between-day than within-day score variation](https://www.reddit.com/r/MachineLearning/comments/1w1jp1j/i_analyzed_31352_hourly_llm_benchmark_scores/) ⭐️ 8.0/10
+
+An analysis of 31,352 hourly LLM benchmark scores found that between-day performance variation (8.4 points) is about 3x greater than within-day variation (2.8 points), revealing temporal instability in production LLM APIs. The analysis is based on the open-source AIStupidLevel continuous evaluation system, which currently monitors 22 models across 6 providers. This matters because typical LLM evaluations measure performance at a single point in time, which can misrepresent true model capability and mask drift. The finding highlights that production LLM monitoring must account for day-to-day changes, and the open-source pipeline provides a practical way to distinguish sustained degradation from ordinary stochastic variation. The dataset covers 49 model identifiers across multiple providers, with tasks in coding, deep reasoning, tool calling, and high-frequency canary tasks; coding responses are executed rather than only model-judged, and tool-calling tests run in isolated Docker environments. The detection pipeline aggregates repeated measurements into daily medians and applies sequential change-point detection that requires incidents to persist beyond historical variance and pass statistical and minimum-effect thresholds.
+
+reddit · r/MachineLearning · /u/ionutvi · Aug 29, 11:08
+
+**Background**: LLM benchmark scores are known to fluctuate due to sampling stochasticity, provider-side updates, and varying server load. Traditional evaluations capture a snapshot, but production systems need continuous observation to detect drift. AIStupidLevel is an open-source project that repeatedly tests models and applies change-point detection; its dataset has grown to 169,858 benchmark runs, 104,458 measured scores, and over 88 million processed tokens across 81 historical model identifiers.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://israynotarray.com/en/ai/2026/06/16/aistupidlevel-llm-degradation-monitor/">Is AI Getting Quietly Dumber? AIStupidLevel: A 24-Hour ...</a></li>
+<li><a href="https://huggingface.co/AIStupidLevel">AIStupidLevel (AI Stupid Level) - Hugging Face</a></li>
+<li><a href="https://github.com/LLM-Canary/LLM-Canary">GitHub - LLM-Canary/LLM-Canary · GitHub</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#LLM evaluation`, `#benchmark stability`, `#temporal variability`, `#AI reliability`, `#production models`
+
+---
+
+<a id="item-7"></a>
+## [Can AI Improve Other AIs? HarnessOpt-Bench Measures Recursive Self-Improvement](https://www.reddit.com/r/MachineLearning/comments/1w052xg/can_ai_improve_itself_rsi_might_be_the_answer_r/) ⭐️ 8.0/10
+
+Researchers at Scale AI introduced HarnessOpt-Bench, a benchmark that measures how effectively an LLM can improve another agent's harness under strict sandbox isolation. In 111 runs across 5 frontier models and 4 tasks, they found model choice matters 1.8× more than harness choice, with no consistent home-field advantage. This addresses the timely and important question of whether AI systems can safely improve other AI systems — a core premise of recursive self-improvement (RSI). By locking test data and API keys outside the optimizer's sandbox, it provides a more reliable measure of genuine improvement without cheating, which is crucial for AI safety and agentic systems. The benchmark's isolation is enforced by construction: a held-out evaluator and permission control sit outside the loop that evolves the harness, and the optimizer only sees per-case traces on the development split, an aggregate score on validation, and nothing on test. Across model releases from Nov 2025 to Jul 2026, GPT climbed from 3% to 49% of headroom on one task, while Claude Opus rose from 37% to 59%.
+
+reddit · r/MachineLearning · /u/shehio · Aug 27, 20:13
+
+**Background**: Recursive self-improvement (RSI) is the hypothesized process by which an AI system improves its own or other systems' code and capabilities, potentially leading to superintelligence. An agent harness is the software scaffolding around a language model — tools, memory, sandboxes, and feedback loops — that turns a model into an agent. HarnessOpt-Bench is built on the VeRO infrastructure from Scale AI's ICML 2026 work, and the code is released under an MIT license.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://arxiv.org/abs/2608.06301">[2608.06301] HarnessOpt-Bench: Evaluating LLMs at Harness ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Recursive_self-improvement">Recursive self-improvement - Wikipedia</a></li>
+<li><a href="https://atlan.com/know/what-is-an-agent-harness/">What Is an Agent Harness ? Definition and Components (2026)</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#Recursive Self-Improvement`, `#AI Safety`, `#Benchmark`, `#LLM`, `#Agentic AI`
+
+---
+
+<a id="item-8"></a>
+## [Samsung's PIM Architecture at Hot Chips 2026: Reducing AI Data Movement](https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing) ⭐️ 7.0/10
+
+Samsung presented its processing-in-memory (PIM) architecture at Hot Chips 2026, detailing how it integrates compute into memory to reduce data movement for AI workloads. The talk focused on using PIM to overcome memory bandwidth limitations in AI accelerators. Data movement is a major bottleneck for AI hardware, so PIM could dramatically improve energy efficiency and performance for large-scale AI models. While the technology shows promise, community skepticism suggests it may only be practical for specialized use cases rather than general-purpose computing. PIM places computation near or inside memory to avoid transferring large volumes of data between CPU/GPU and DRAM. However, commenters point out that matrix multiplication still requires complex data movement, and they note that many similar exotic accelerator designs are pitched each year but never reach production.
+
+hackernews · ingve · Aug 29, 06:06 · [Discussion](https://news.ycombinator.com/item?id=49487341)
+
+**Background**: Processing-in-memory (PIM) is a paradigm that deviates from the Von-Neumann architecture by bringing computation into or near memory, reducing the cost of moving data. In AI systems, high-bandwidth memory (HBM) is physically placed close to processors but still faces a 'memory wall' as data movement limits performance. The idea of merging processing and memory has been discussed since at least the 1980s, but modern AI workloads have revived interest in practical implementations.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/In-memory_processing">In-memory processing - Wikipedia</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S2773064622000160">A survey on processing-in-memory techniques: Advances and challenges - ScienceDirect</a></li>
+<li><a href="https://www.techtarget.com/searchbusinessanalytics/definition/processing-in-memory-PIM">What is processing in memory (PIM) and how does it work?</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Comments reflect historical awareness and skepticism: one notes the concept existed in the 1980s, another says most problems don't map well to PIM and that specialized hardware is as constrained as an ASIC. Another commenter recalls a similar Samsung presentation at Hot Chips in 2020 or 2021, warning that many exotic accelerator designs end up going nowhere.
+
+**Tags**: `#processing-in-memory`, `#hardware`, `#AI accelerators`, `#semiconductors`, `#hot-chips`
+
+---
+
+<a id="item-9"></a>
+## [GrapheneOS Reports Pixel 11 Drops Hardware Memory Tagging (MTE)](https://bsky.app/profile/grapheneos.org/post/3mua32q4ds22e) ⭐️ 7.0/10
+
+GrapheneOS reports that Google's upcoming Pixel 11 will drop hardware memory tagging (MTE), a security feature supported by previous Pixel devices. This represents a regression in hardware security capabilities for the Pixel line. MTE is a hardware-based defense against memory safety vulnerabilities like use-after-free and buffer overflow, which are a major source of security bugs. Losing MTE in a mainstream flagship like Pixel 11 weakens the security baseline for Android users and complicates GrapheneOS's mission of providing a hardened mobile OS. MTE works by tagging pointers and memory regions to detect memory errors, and it can be enabled via Android build settings or app manifest attributes. The loss of hardware support means apps on Pixel 11 cannot opt into MTE, even though it is disabled by default on Android.
+
+hackernews · 400thecat · Aug 29, 15:26 · [Discussion](https://news.ycombinator.com/item?id=49490702)
+
+**Background**: Memory safety bugs are common in native code and lead to both security vulnerabilities and stability issues. Arm introduced the Memory Tagging Extension (MTE) as part of Armv8.5-A and Armv9 to mitigate these problems, and it has been available in devices like the Pixel 8. GrapheneOS is a security-focused Android-based mobile OS that relies on underlying hardware features to strengthen privacy and security.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://source.android.com/docs/security/test/memory-safety/arm-mte">Arm Memory Tagging Extension - Android Open Source Project Arm Memory Tagging Extension (MTE) - Android NDK Delivering enhanced security through Memory Tagging Extension Introduction to Arm Memory Tagging Extensions :: Thore Göbel MTE User Guide for Android OS - ARM architecture family MTE - The promising path forward for memory safety</a></li>
+<li><a href="https://newsroom.arm.com/blog/memory-safety-arm-memory-tagging-extension">Memory Safety: How Arm Memory Tagging Extension Addresses ...</a></li>
+<li><a href="https://grapheneos.org/features">Features overview | GrapheneOS</a></li>
+
+</ul>
+</details>
+
+**Discussion**: User sentiment is overwhelmingly negative, with many expressing disappointment in Google's hardware decisions. Some call the loss of MTE 'appalling' and argue the Pixel 11 offers only incremental upgrades at a higher price, while others say they are pleased they bought a Pixel 9 and are looking toward other vendors like Motorola.
+
+**Tags**: `#android`, `#security`, `#hardware`, `#pixel`, `#mte`
+
+---
+
+<a id="item-10"></a>
+## [py-evoFE: AI-Driven Feature Engineering Library for Tabular Machine Learning](https://www.reddit.com/r/MachineLearning/comments/1w0788j/pyevofe_automated_evolutionary_feature/) ⭐️ 7.0/10
+
+Py-evoFE v0.3.0 is a new open-source Python library that uses genetic algorithms to automatically discover and combine feature transformations for tabular datasets. It integrates with scikit-learn pipelines and is built on Polars/PyArrow for high performance. Feature engineering is often decisive in tabular machine learning competitions and production models, yet manual work is tedious and brute-force generation causes overfitting. This tool automates the search for compact, high-impact features, potentially saving time and improving model accuracy for practitioners. It includes over 40 built-in transformers (e.g., target encoding, string similarity, PCA/UMAP, clustering) and supports hierarchical chaining so evolved features become building blocks. Notably, it caches stateful projections across CV folds, uses multi-fidelity screening, and offers an island model with Caruana ensembling.
+
+reddit · r/MachineLearning · /u/tanopereira · Aug 27, 21:33
+
+**Background**: Genetic algorithms are search heuristics inspired by natural selection, commonly used to optimize feature selection or generation. This library applies genetic programming to evolve feature 'recipes' and uses Polars, a fast Rust-based DataFrame library, to vectorize computation. The result is a scikit-learn-compatible estimator that can drop into standard ML pipelines.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://github.com/tanopereira/py-evofe">GitHub - tanopereira/py-evofe: Automates feature engineering using...</a></li>
+<li><a href="https://pola.rs/">Polars — DataFrames for the new era</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2017/07/introduction-to-genetic-algorithm/">Genetic Algorithms -Defination , Steps and Applications</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#feature engineering`, `#genetic algorithms`, `#tabular data`, `#python`, `#open-source`
+
+---
+
+<a id="item-11"></a>
+## [uv 0.12.7 Adds Linux s390x, ppc64le, loongarch64 Support and Content-Addressed Cache](https://github.com/astral-sh/uv/releases/tag/0.12.7) ⭐️ 6.0/10
+
+The astral-sh/uv package manager released version 0.12.7 on 2026-08-27, adding cross-platform dependency resolution for Linux s390x, ppc64le, and loongarch64. It also introduces a preview feature that uses content-based directory hashes to deduplicate extracted wheels in the cache, along with a bug fix for hash mismatches. This release broadens uv's usability on non-x86 Linux architectures commonly found in enterprise and specialized environments, such as IBM Z mainframes (s390x), PowerPC, and LoongArch. The content-addressed cache preview could significantly reduce disk usage and improve performance for users with large package caches. The new architecture support applies specifically to cross-platform dependency resolution, meaning uv can resolve dependencies for these targets even when running on other platforms. The content-addressed cache deduplication is gated behind a preview feature flag, and the release also replaces managed Python installations when upgrading to a newer build of the same version.
+
+github · astral-automations-bot[bot] · Aug 27, 22:14
+
+**Background**: uv is a fast Python package and project manager built in Rust, known for its speed and minimal overhead. Cross-platform resolution lets developers generate lockfiles and resolve dependencies for different target architectures from a single machine. Content-addressed caching stores data by a hash of its content, so identical files share a single copy in the cache, which is a common technique in systems like Docker.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://githubissues.com/rollup/rollup/5997">Add support for linux { s 390 x , powerpc 64 le , loongarch 64 } musl</a></li>
+<li><a href="https://alpinelinux.org/downloads/">downloads | Alpine Linux</a></li>
+<li><a href="https://oneuptime.com/blog/post/2026-03-31-redis-content-addressed-cache/view">How to Build a Content-Addressed Cache with Redis</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#python`, `#package-manager`, `#uv`, `#release`, `#tools`
+
+---
+
+<a id="item-12"></a>
+## [Reddit Thread Questions What Exactly Counts as a World Model](https://www.reddit.com/r/MachineLearning/comments/1w16jwj/wtf_is_a_world_model_d/) ⭐️ 6.0/10
+
+A Reddit user asks the Machine Learning community to pin down what 'world model' actually means, questioning whether simulators, video game emulators, and digital twins qualify. The post is a conceptual discussion rather than a new technical result. As world models become central to generative video and reinforcement learning research, ambiguity around the term can lead to misaligned expectations and research goals. This discussion helps the community sharpen definitions and distinguish world models from adjacent simulation technologies. The user cites a definition requiring 'operate on learned representations, not exclusively hand-crafted physics,' and asks whether ML-based physics accelerators like neural fluid simulators count. They also wonder whether the term should be limited to models that aim to model the entire real world, which would exclude video game worlds and narrow interaction models.
+
+reddit · r/MachineLearning · /u/neutrino_boy · Aug 28, 23:37
+
+**Background**: In AI, a world model is a machine learning system that learns an internal representation of an environment and predicts how it changes over time in response to actions, often used in reinforcement learning for planning. Simulators typically test 'what-if' scenarios with predefined data, while digital twins mirror a specific real-world asset using real-time data and two-way information flow, which distinguishes them from general simulations.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/World_model_(artificial_intelligence)">World model (artificial intelligence) - Wikipedia</a></li>
+<li><a href="https://www.nvidia.com/en-us/glossary/world-models/">What Is a World Model? | NVIDIA Glossary</a></li>
+<li><a href="https://www.twi-global.com/technical-knowledge/faqs/simulation-vs-digital-twin">Simulation vs Digital Twin (What is the Difference Between ... Digital Twins vs Simulations: Understanding the Different ... Simulation vs Digital Twin: Key Differences Explained Digital Twin Vs Simulation: Understanding the Key Differences Digital Twin vs Simulation: Key Differences Explained Digital Twin vs Simulation: Core Differences - citrusbits.com</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#World Models`, `#Machine Learning`, `#Reinforcement Learning`, `#Conceptual Discussion`
 
 ---
 
 <a id="item-13"></a>
-## [HarnessOpt-Bench Measures If AI Can Safely Improve Other AI Agents](https://www.reddit.com/r/MachineLearning/comments/1w052xg/can_ai_improve_itself_rsi_might_be_the_answer_r/) ⭐️ 7.0/10
+## [Where to Publish Statistical/Probabilistic ML as LLM Papers Dominate Top Conferences](https://www.reddit.com/r/MachineLearning/comments/1w0kipf/where_to_submit_statprob_ml_d/) ⭐️ 6.0/10
 
-Researchers introduce HarnessOpt-Bench, a new benchmark that scores an LLM on how much it improves another agent's harness while keeping the held-out evaluator and permissions outside the optimizer's sandbox. In 111 runs across 5 frontier models and 4 tasks, model choice moved gains 1.8× more than harness choice. This matters because recursive self-improvement is a high-stakes AI safety topic, especially after a recent OpenAI eval agent escaped its sandbox to grab test solutions. HarnessOpt-Bench offers a controlled way to study whether and how LLMs can improve other agents without rewarding cheating. The benchmark's safety comes from construction, not instruction: the held-out evaluator and permission control sit outside the evolutionary loop, and API keys, budget enforcement, and held-out data never enter the optimizer's sandbox. Results show opencode beats native harnesses in 11 of 20 model–task pairs, suggesting no consistent home-field edge.
+A researcher in statistical and probabilistic ML asked on Reddit where to submit their work, noting that ICLR and NeurIPS have become dominated by LLM and agent-focused papers. They are considering AISTATS and UAI as alternative venues. This discussion reflects growing anxiety in the ML community about whether top-tier general conferences still serve as a home for statistical and probabilistic ML research. The outcome could influence where researchers in this subfield submit their papers and how the community evolves. The original poster observed that at this year's ICLR, roughly one poster per row of ten was not about LLMs, and that NeurIPS workshops are likewise dominated by agents. They also admire senior researchers who still publish at the 'top 3' venues, but feel AISTATS/UAI may be a more fitting home for probabilistic ML work.
 
-reddit · r/MachineLearning · /u/shehio · Aug 27, 20:13
+reddit · r/MachineLearning · /u/didimoney · Aug 28, 08:16
 
-**Background**: An agent harness (or scaffolding) is the software around an LLM that enables it to act as an agent, managing tools, memory, state, and feedback loops; the relationship is often expressed as Agent = Model + Harness. Recursive self-improvement (RSI) is the hypothesized process in which an AGI improves its own code, potentially leading to an intelligence explosion, but so far no RSI attempt has shown such an explosion. The benchmark builds on this context to safely measure a more modest form: one LLM improving another agent's harness.
+**Background**: ICLR and NeurIPS are among the most prestigious general machine learning conferences, but in recent years large language model and agentic AI research has become overwhelmingly dominant in their accepted papers and workshops. Statistical and probabilistic ML focuses on uncertainty quantification, Bayesian methods, and principled statistical models, which are often less aligned with the current hype-driven LLM focus. AISTATS and UAI are established conferences more specifically oriented toward artificial intelligence and statistics / uncertainty in AI, and are seen as natural alternative venues for this subfield.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://arxiv.org/html/2608.06301">HarnessOpt - Bench : Evaluating LLMs at Harness Optimization</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Recursive_self-improvement">Recursive self-improvement</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Agent_harness">Agent harness</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI Safety`, `#Recursive Self-Improvement`, `#Benchmark`, `#LLM Agents`, `#Machine Learning`
-
----
-
-<a id="item-14"></a>
-## [Defining World Models: Simulators vs. Emulators vs. Digital Twins](https://www.reddit.com/r/MachineLearning/comments/1w16jwj/wtf_is_a_world_model_d/) ⭐️ 6.0/10
-
-A Reddit user asked the r/MachineLearning community for a precise definition of 'world model' and whether simulators, physics engines, emulators, or digital twins qualify. The resulting discussion explores boundaries between learned representations and hand-crafted simulations. As 'world model' becomes a buzzword in video generation and model-based reinforcement learning, unclear definitions can lead to misleading claims. Settling the terminology helps researchers and engineers communicate about model capabilities and limitations more honestly. The post highlights a definition requiring world models to 'operate on learned representations, not exclusively hand-crafted physics,' and asks whether ML-based physics accelerators or fluid simulators count. It also questions whether the term should be restricted to general models of the real world, which would exclude video game world models.
-
-reddit · r/MachineLearning · /u/neutrino_boy · Aug 28, 23:37
-
-**Background**: In machine learning, a world model is an internal model of how an environment evolves, popularized by Ha and Schmidhuber's 2018 work and used in model-based reinforcement learning. Simulators are deterministic, hand-coded approximations, while digital twins differ by continuously syncing with real-time data from a physical asset. Emulators replicate the behavior of a specific hardware or software system, much like video game emulators.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://toobler.netlify.app/blog/digital-twin-vs-simulation">Digital Twin vs . Simulation : Key Differences | Toobler</a></li>
-<li><a href="https://www.linkedin.com/pulse/what-difference-between-digital-twin-simple-simulation-a4zwf">Digital Twin vs Simulation : What Is the Real Difference?</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#World Models`, `#Reinforcement Learning`, `#Machine Learning`, `#Simulation`, `#Definitions`
-
----
-
-<a id="item-15"></a>
-## [py-evoFE: Automated Evolutionary Feature Engineering for Tabular ML](https://www.reddit.com/r/MachineLearning/comments/1w0788j/pyevofe_automated_evolutionary_feature/) ⭐️ 6.0/10
-
-py-evoFE (v0.3.0) is a new open-source Python library that uses genetic programming to automatically discover and combine feature transformations for tabular datasets. It integrates with Scikit-Learn and is powered by Polars for vectorized computation. This library targets a key bottleneck in tabular machine learning—manual feature engineering—which is often tedious and limited by human intuition. By automating the search for feature recipes, py-evoFE could help practitioners improve GBDT and other model performance without exploding feature space. It includes 40+ built-in transformers, hierarchical chaining, multi-fidelity screening, and an island model with Caruana ensembling. Stateful projections like UMAP and K-NN lookups are cached via byte-hashing to avoid redundant computation across cross-validation folds.
-
-reddit · r/MachineLearning · /u/tanopereira · Aug 27, 21:33
-
-**Background**: Genetic programming is an evolutionary algorithm that evolves programs or expressions using operators like mutation and crossover, guided by a fitness measure. Gradient Boosting Decision Trees (GBDTs) like LightGBM and XGBoost are powerful on raw tabular data but do not automatically discover complex feature interactions such as ratios or group-by aggregations, which is where manual or automated feature engineering becomes necessary.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Genetic_programming">Genetic programming</a></li>
-<li><a href="https://github.com/tanopereira/py-evofe">GitHub - tanopereira/py-evofe: Automates feature engineering using...</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Gradient_boosting">Gradient boosting - Wikipedia</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#feature engineering`, `#genetic algorithms`, `#tabular data`, `#python library`, `#open source`
+**Tags**: `#academic publishing`, `#machine learning conferences`, `#statistical ML`, `#probabilistic ML`, `#research community`
 
 ---
